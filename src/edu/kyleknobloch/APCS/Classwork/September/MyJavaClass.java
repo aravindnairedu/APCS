@@ -1,6 +1,6 @@
 import java.lang.System;
 
-public class Sep4 {
+public class MyJavaClass {
     public static void main(String args[]) {
 
         //How many bits are being used below?
@@ -9,7 +9,7 @@ public class Sep4 {
         double j, k;
         char letter;
 
-        Sep4 mjc; //Class makes new data types
+        MyJavaClass mjc; //Class makes new data types
 
         x = 66;
         y = 100;
@@ -19,7 +19,7 @@ public class Sep4 {
 
         letter = 'J';
 
-        mjc = new Sep4(); //Now object
+        mjc = new MyJavaClass(); //Now object
 
 
         System.out.println("X = " + x + ". Y = " + y + ". J = " + j + ". K = " + k + ". Letter = " + letter);
