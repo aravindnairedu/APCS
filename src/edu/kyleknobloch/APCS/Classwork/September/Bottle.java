@@ -2,6 +2,11 @@
 
 public class Bottle {
 
+    private double volume;
+    private String container;
+    private String label;
+
+
     public Bottle(String message) {
         //String constrictor
 
@@ -10,10 +15,19 @@ public class Bottle {
     }
 
     public Bottle() {
+        //default constructor
+
+
+        volume    = 20.9;
+        container = "Glass";
+        label     = "Poland springs";
+
 
         System.out.println("This is the default constructor.");
 
     }
+
+    //we're able to create many contructors using the same name as long as they take diffrent things (Have diffrent signetures)
 
     public Bottle(double v, String c, String l) {
 
