@@ -1,3 +1,4 @@
+
 /**
  * Author: Kyle Knobloch
  * Class: AP CS
@@ -19,6 +20,7 @@ public class Bits {
         //32-bit system
         //multiply by 2 on a 64-bit system
 
+       /*
         long    = 8; //bites
         int     = 4; //bits
         short   = 2; //bits
@@ -28,6 +30,7 @@ public class Bits {
         float   = 4; //bits
         void;   //none  //2 bits
         boolean = true; //2 bits
+        */
 
     } //end main
 } //end clas

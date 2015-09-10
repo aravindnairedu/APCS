@@ -1,12 +1,15 @@
+package edu.kyleknobloch.APCS.Classwork.September;
+
 public class Foo {
     public int[] X = new int[]{1, 3, 5, 7, 9, 11};
 
     public static void main (String args[]) {
 
-        Foo app=new foo();
+
 
     }
 
+    /**
     public void foo(boolean a, int x, int y, int z) {
         label1:
         do {
@@ -50,4 +53,5 @@ public class Foo {
         public void bar() throws E1, E2 {
         }
     }
+   */
 }

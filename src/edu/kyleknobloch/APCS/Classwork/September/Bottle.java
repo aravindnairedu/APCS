@@ -1,4 +1,3 @@
-//package edu.kyleknobloch.APCS.Classwork.September;
 
 public class Bottle {
 
@@ -130,9 +129,10 @@ public class Bottle {
 
     }
 
-    public setContainer(String container) {
+    public void setContainer(String container) {
 
         this.container = container;
 
     }
 }
+

@@ -1,4 +1,3 @@
-import java.lang.System;
 
 public class MyJavaClass {
     public static void main(String args[]) {
@@ -29,13 +28,13 @@ public class MyJavaClass {
         System.out.println("K = " + k); //print out new k value
 
 
-    } //end main
+    }
 
     public double MyPow(int base, int exp) {
 
                                      //Run the actual program, Math.pow.
         return(Math.pow(base, exp)); //return the final answer
 
-    } //end MyPow
+    }
 
-} //end class
+}

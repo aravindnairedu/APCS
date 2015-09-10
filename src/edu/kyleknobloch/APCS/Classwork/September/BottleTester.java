@@ -1,4 +1,3 @@
-//package edu.kyleknobloch.APCS.Classwork.September;
 
 public class BottleTester {
 
@@ -18,7 +17,7 @@ public class BottleTester {
         container = "Glass";
         lable     = "Poland Springs";
         cap       = "Medal Cap";
-        contents  = "water";
+        contents  = "Water";
 
 
         //Bottle btl  = new Bottle(); //use Default constructor
