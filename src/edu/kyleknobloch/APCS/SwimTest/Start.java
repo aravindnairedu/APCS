@@ -14,6 +14,13 @@ import java.util.logging.Logger;
  * For The Y @ Aquatics
  **
  * Actions:
+ * N/a
+ *
+ *
+ $mysql_host = "mysql6.000webhost.com";
+ $mysql_database = "a7604661_Emil";
+ $mysql_user = "a7604661_emil";
+ $mysql_password = "12345Dog";
  */
 
 
@@ -24,9 +31,9 @@ public class Start {
         Statement  st  = null;
         ResultSet  rs  = null;
 
-        String url      = "jdbc:mysql://localhost:3306/testdb";
-        String user     = "testuser";
-        String password = "test623";
+        String url      = "jdbc:mysql://mysql6.000webhost.com:3306/a7604661_Emil";
+        String user     = "a7604661_emil";
+        String password = "12345Dog";
 
         try {
             con = DriverManager.getConnection(url, user, password);
