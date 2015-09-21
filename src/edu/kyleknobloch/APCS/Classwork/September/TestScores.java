@@ -45,7 +45,7 @@ public class TestScores {
 
     public String toString() {
 
-        String msg = "The average letter grade is " + findLetterGrade(avg) + ".";
+        String msg = "The average letter grade is " + findLetterGrade(getAvg()) + ".";
         return msg;
     }
 
