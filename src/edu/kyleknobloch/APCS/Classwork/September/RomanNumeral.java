@@ -1,11 +1,6 @@
-//package edu.kyleknobloch.APCS.Classwork.September;
+package edu.kyleknobloch.APCS.Classwork.September;
 
-/**
- * Created by kyleknobloch on 9/14/15,
- * For
- * *
- * Actions:
- */
+
 public class RomanNumeral {
     private String roman;
     private int    number;

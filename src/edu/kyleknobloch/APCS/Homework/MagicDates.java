@@ -1,3 +1,6 @@
+package edu.kyleknobloch.APCS.Homework;
+
+
 import java.util.Scanner;
 
 public class MagicDates {

@@ -1,3 +1,5 @@
+package edu.kyleknobloch.APCS.Classwork.September;
+
 import java.util.*;
 
 public class ReadFromKeyboard {

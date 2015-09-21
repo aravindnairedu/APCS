@@ -1,4 +1,4 @@
-
+package edu.kyleknobloch.APCS.Classwork.September;
 
 public class Automobile {
 
@@ -13,26 +13,25 @@ public class Automobile {
 
     public Automobile (int year, String make, String model, double mileage, String color, double engineType, double stickerPrice) {
 
-        setYear(year);
-        setMake(make);
-        setModel(model);
-        setMileage(mileage);
-        setColor(color);
-        setEngineType(engineType);
-        setStickerPrice(stickerPrice);
+        this.year = year;
+        this.make = make;
+        this.model = model;
+        this.mileage = mileage;
+        this.color = color;
+        this.engineType = engineType;
+        this.stickerPrice = stickerPrice;
 
     }
 
     public Automobile (double stickerPrice) {
 
-        setYear(2000);
-        setMake("Honda");
-        setModel("Mr. Drugan");
-        setMileage(10);
-        setColor("Blue");
-        setEngineType(4.5);
-        setStickerPrice(stickerPrice);
-
+        year = 2000;
+        make = "honda";
+        model = "Mr. Drugan";
+        mileage = 10;
+        color = "Blue";
+        engineType = 4.5;
+        this.stickerPrice = stickerPrice;
     }
 
     /**
@@ -41,13 +40,13 @@ public class Automobile {
 
     public String toString() {
 
-        String msg =       "Year: " + getYear() + "\n" +
-                           "Make: " + getMake() + "\n" +
-                           "Model: " + getModel() + "\n" +
-                           "Mileage: " + getMileage() + "\n" +
-                           "Color: " + getColor() + "\n" +
-                           "Engine Type:" + getEngineType() + "\n" +
-                           "Sticker Price: " + getStickerPrice();
+        String msg = "Year: " + getYear() + "\n" +
+                     "Make: " + getMake() + "\n" +
+                     "Model: " + getModel() + "\n" +
+                     "Mileage: " + getMileage() + "\n" +
+                     "Color: " + getColor() + "\n" +
+                     "Engine Type:" + getEngineType() + "\n" +
+                     "Sticker Price: $" + getStickerPrice();
 
         return msg;
 
@@ -55,13 +54,13 @@ public class Automobile {
 
     private String toString(int year, String make, String model, double mileage, String color, double engineType, double stickerPrice) {
 
-        String msg =    "Year: " + year + "\n" +
-                        "Make: " + make + "\n" +
-                        "Model: " + model + "\n" +
-                        "Mileage: " + mileage + "\n" +
-                        "Color: " + color + "\n" +
-                        "Engine Type:" + engineType + "\n" +
-                        "Sticker Price: " + stickerPrice;
+        String msg = "Year: " + year + "\n" +
+                     "Make: " + make + "\n" +
+                     "Model: " + model + "\n" +
+                     "Mileage: " + mileage + "\n" +
+                     "Color: " + color + "\n" +
+                     "Engine Type:" + engineType + "\n" +
+                     "Sticker Price: $" + stickerPrice;
 
         return msg;
     }
@@ -70,28 +69,9 @@ public class Automobile {
      * Set Methods
      */
 
-    public void setYear(int year) {
-        this.year = year;
-    }
-
-    public void setMake(String make) {
-        this.make = make;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
-    }
 
     public void setMileage(double mileage) {
         this.mileage = mileage;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public void setEngineType(double engineType) {
-        this.engineType = engineType;
     }
 
     public void setStickerPrice(double stickerPrice) {

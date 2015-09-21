@@ -1,9 +1,4 @@
-
-/**
- * Created by Kyle Knobloch on 9/11/15,
- * AP CS
- * Mr. Drugan
- */
+package edu.kyleknobloch.APCS.Classwork.September;
 
 
 public class CanTester {

@@ -1,3 +1,5 @@
+package edu.kyleknobloch.APCS.Classwork.September;
+
 import java.util.Scanner;
 
 public class AutomobileTester {
@@ -16,7 +18,7 @@ public class AutomobileTester {
         price = console.nextDouble();
 
         Automobile car2 = new Automobile(price);
-        System.out.println(car.toString());
+        System.out.println(car2.toString());
 
 
     }
