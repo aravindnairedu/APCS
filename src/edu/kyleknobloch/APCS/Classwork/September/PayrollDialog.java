@@ -18,8 +18,9 @@ public class PayrollDialog
        String inputHours;
        String name;        // The user's name
        int hours =0;          // The number of hours worked
+       double workingPay;
        double payRate;     // The user's hourly pay rate
-       double grossPay;    // The user's gross pay
+       double grossPay=0;    // The user's gross pay
 
 
        // Get the user's name.
@@ -29,10 +30,6 @@ public class PayrollDialog
        inputHours = JOptionPane.showInputDialog("How many hours did you work this week? ");
 
        StringTokenizer ST = new StringTokenizer(inputHours, ".");
-
-       while (ST.hasMoreTokens()) {
-           System.out.println(ST.nextToken());
-       }
 
        // Convert the input to an int.
        //hours = Integer.parseInt(inputString);
@@ -44,6 +41,18 @@ public class PayrollDialog
        payRate = Double.parseDouble(inputString);
 
        // Calculate the gross pay.
+
+       while (ST.hasMoreTokens()) {
+           double whileFiles = Integer.parseInt(ST.nextToken());
+
+           workingPay = whileFiles * payRate;
+
+
+           grossPay = grossPay + workingPay;
+
+       }
+
+
        grossPay = hours * payRate;
 
        // Display the results.
