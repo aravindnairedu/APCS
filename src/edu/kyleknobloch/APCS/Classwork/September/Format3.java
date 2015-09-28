@@ -17,7 +17,7 @@ public class Format3
       double number5 = 1234567.899;
 
       // Create a DecimalFormat object.
-      DecimalFormat formatter = new DecimalFormat("#,##0.00");
+      DecimalFormat formatter = new DecimalFormat("##,##.##");
 
       // Display the formatted variable contents.
       System.out.println(formatter.format(number1));
