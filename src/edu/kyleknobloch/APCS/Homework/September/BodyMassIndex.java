@@ -1,4 +1,4 @@
-package edu.kyleknobloch.APCS.Homework;
+package edu.kyleknobloch.APCS.Homework.September;
 
 
 import java.util.Scanner;
