@@ -31,7 +31,7 @@ public class RollDice
          System.out.println("Their values are:");
          System.out.println(die1 + " " + die2);
          
-         System.out.print("Roll them again (y = yes)? ");
+         System.out.println("Roll them again (y = yes)? ");
          again = keyboard.nextLine();
       }
    }
