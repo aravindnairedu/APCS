@@ -5,6 +5,6 @@ public class Die {
     public static int roll() {
         Random roll = new Random();
 
-        return roll.nextInt(6) +1;
+        return roll.nextInt(6) + 1;
     }
 }
