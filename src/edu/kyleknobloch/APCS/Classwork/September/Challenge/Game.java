@@ -65,7 +65,7 @@ public class Game {
             }
 
             //Run some calculations and background items that need to be ran before we display the final message.
-            //turn++;
+            turn++;
             turnsLeft = 5 - turn;
 
             //Calculate chance and apply only if you did not get anything else.
@@ -95,9 +95,9 @@ public class Game {
             //reset the count
             count1 = count2 = count3 = count4 = count5 = count6 = 0;
 
-        } while (true); //only 5 turns.
+        } while (turn <= 4); //only 5 turns.
 
-        //JO.showMessageDialog(null, "This round has ended! Your final score was " + getScore() + "! Hope to see you again.");
+        JO.showMessageDialog(null, "This round has ended! Your final score was " + getScore() + "! Hope to see you again.");
     }
 
     public void eval(int dice) {
