@@ -6,24 +6,21 @@ public class Game {
 
     private int score;
     private int count1, count2, count3, count4, count5, count6;
+    private int dice1, dice2, dice3, dice4, dice5;
     private boolean usedChance = false;
     private String message;
     private boolean scored = false;
 
     public Game() {
 
-        int dice1, dice2, dice3, dice4, dice5, sum, turnsLeft;
+        int sum, turnsLeft;
         int turn = 0;
         JOptionPane JO = new JOptionPane();
 
 
         do {
             //Calculate dice information & run evaluations
-            dice1 = Die.roll();
-            dice2 = Die.roll();
-            dice3 = Die.roll();
-            dice4 = Die.roll();
-            dice5 = Die.roll();
+            roll();
             sum  = dice1 + dice2 + dice3 + dice4 + dice5;
             eval(dice1);
             eval(dice2);
@@ -102,6 +99,14 @@ public class Game {
             scored = true;
         }
 
+    }
+
+    private void roll() {
+        dice1 = Die.roll();
+        dice2 = Die.roll();
+        dice3 = Die.roll();
+        dice4 = Die.roll();
+        dice5 = Die.roll();
     }
 
     private void eval(int dice) {
