@@ -1,4 +1,4 @@
-package edu.kyleknobloch.APCS.Classwork.September;
+package edu.kyleknobloch.APCS.Classwork.September.Files;
 import java.util.Scanner;
 import java.io.*;
 

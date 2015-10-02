@@ -1,4 +1,4 @@
-package edu.kyleknobloch.APCS.Classwork.September;
+package edu.kyleknobloch.APCS.Classwork.September.TesterProjects;
 
 public class Can {
 

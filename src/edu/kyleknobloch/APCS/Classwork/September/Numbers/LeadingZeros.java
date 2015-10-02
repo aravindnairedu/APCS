@@ -1,4 +1,4 @@
-package edu.kyleknobloch.APCS.Classwork.September;
+package edu.kyleknobloch.APCS.Classwork.September.Numbers;
 
 /**
    This program displays numbers padded with leading zeros.

@@ -1,4 +1,4 @@
-package edu.kyleknobloch.APCS.Classwork.September;
+package edu.kyleknobloch.APCS.Classwork.September.Random;
 
 import javax.swing.JOptionPane;
 import java.util.Random;

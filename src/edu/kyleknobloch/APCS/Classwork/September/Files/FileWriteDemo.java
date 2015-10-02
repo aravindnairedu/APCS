@@ -1,4 +1,4 @@
-package edu.kyleknobloch.APCS.Classwork.September;
+package edu.kyleknobloch.APCS.Classwork.September.Files;
 import java.util.Scanner;   // Needed for Scanner class
 import java.io.*;           // Needed for File I/O classes
 
