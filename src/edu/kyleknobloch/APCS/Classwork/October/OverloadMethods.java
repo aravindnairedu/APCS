@@ -18,7 +18,12 @@ public class OverloadMethods {
         System.out.println(OLM.add(10l, 11l));
         System.out.println(OLM.add(sTen, sElevin));
         System.out.println(OLM.add("ten", "elevin"));
+        OLM.add();
 
+    }
+
+    private void add() {
+        System.out.println("Nothing");
     }
 
     private int add(int one, int two) {
