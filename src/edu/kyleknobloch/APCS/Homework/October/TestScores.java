@@ -8,6 +8,7 @@ public class TestScores {
 
 
     public TestScores() {
+        //default constuctor
 
         String input;
         JOptionPane JO = new JOptionPane();
@@ -36,6 +37,21 @@ public class TestScores {
         JOptionPane.showMessageDialog(null, "The average for the 5 test scors was a " + determineLetterGrade(getAvg()) + ".");
     }
 
+    public TestScores(double grade1, double grade2, double grade3, double grade4, double grade5) {
+        //Default constructor that takes in the 5 grades and prints out the avg.
+        //techinicaly could be used as a toSting but I don't think that would make sense to submit with my homework.
+        //this is more for me to have because I can. 
+        this.grade1 = grade1;
+        this.grade2 = grade2;
+        this.grade3 = grade3;
+        this.grade4 = grade4;
+        this.grade5 = grade5;
+        calcAvg();
+        System.out.println("The average for the 5 test scores was a " + determineLetterGrade(getAvg()) + ".");
+    }
+
+
+
     private void calcAvg() {
         //Average Finder Method
 
@@ -44,7 +60,7 @@ public class TestScores {
     }
 
     private String determineLetterGrade(Double grade) {
-        //find Letter Grade
+        //find Letter Grade Method
 
         String letterGrade;
 
