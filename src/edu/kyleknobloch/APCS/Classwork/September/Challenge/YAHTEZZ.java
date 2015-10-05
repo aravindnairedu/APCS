@@ -16,7 +16,7 @@ public class YAHTEZZ {
             switch (option) {                   //What was the answer?
                 case 0:                         //Yes
                     introduction();
-                    Game yahtezz = new Game();
+                    YAHTEZZGame yahtezz = new YAHTEZZGame();
                     break;
                 case 1:                         //No & Cancel
                 case 2:

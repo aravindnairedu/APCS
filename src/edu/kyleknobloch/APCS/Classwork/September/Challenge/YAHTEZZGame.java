@@ -2,7 +2,7 @@ package edu.kyleknobloch.APCS.Classwork.September.Challenge;
 import javax.swing.*;
 
 
-public class Game {
+public class YAHTEZZGame {
 
     private int score;
     private int count1, count2, count3, count4, count5, count6;
@@ -11,7 +11,7 @@ public class Game {
     private String message;
     private boolean scored = false;
 
-    public Game() {
+    public YAHTEZZGame() {
 
         int sum, turnsLeft;
         int turn = 0;
