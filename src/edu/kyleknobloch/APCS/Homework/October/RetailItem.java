@@ -9,7 +9,7 @@ public class RetailItem {
 
     public RetailItem (String desc, int units, double cost) {
         /*
-         * Take in Descm Units and Cost
+         * Take in Desc Units and Cost
          * Set said items.
          */
 

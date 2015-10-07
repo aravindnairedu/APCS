@@ -14,9 +14,8 @@ public class KnoblochOct7HW {
         RetailItem RI2 = new RetailItem("NightCrow", 1, 10000.0);
         RetailItem RI3 = new RetailItem("AP Computer Science Classes", 0, 5.75);
         RetailItem RI4 = new RetailItem();
-            //set methods for this could work here, to i.e. rename the product, change units & cost. It's easier
-            //to just use the default constructor though.
 
+        //Proof that my set methods work
         RI4.setUnits(5);
         RI4.setCost(50.80);
         RI4.setDesc("Mr. Drugan");
