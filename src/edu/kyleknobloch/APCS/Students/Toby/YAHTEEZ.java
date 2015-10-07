@@ -15,7 +15,7 @@ public class YAHTEEZ {
 		Die die3=new Die();
 		Die die4=new Die();
 		Die die5=new Die();
-		JOptionPane.showMessageDialog(null,"You Coin the dice.");
+		JOptionPane.showMessageDialog(null,"You roll the dice.");
 		JOptionPane.showMessageDialog(null,"You got "+die1.getDice()+","+die2.getDice()+","+die3.getDice()+","+die4.getDice()+","+die5.getDice());
 		Game g=new Game(die1.getDice(),die2.getDice(),die3.getDice(),die4.getDice(),die5.getDice());
 		Score+=g.check();

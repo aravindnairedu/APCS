@@ -26,7 +26,7 @@ public class CrapCasino {
         while (again == 0) {
 
             //Roll the dice!
-            //add 1 because you can't get 0 as a Coin.
+            //add 1 because you can't get 0 as a roll.
 
             roll1 = Die.roll();
             roll2 = Die.roll();

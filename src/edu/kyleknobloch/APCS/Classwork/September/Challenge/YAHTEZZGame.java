@@ -37,7 +37,7 @@ public class YAHTEZZGame {
             turnsLeft = 5 - turn;
 
             //Calculate chance and apply only if you did not get anything else.
-            //Also this now displays the final message before the next Coin.
+            //Also this now displays the final message before the next roll.
             if (scored) {
                 JO.showMessageDialog(null, "Your dice are: \n" + dice1 + "\n" + dice2 + "\n" + dice3 + "\n" + dice4 + "\n" + dice5 + "\n\n" + message + "\n\nYour score is currently " + getScore() + ". \nYou now have " + turnsLeft + " turns left.");
             }
@@ -53,7 +53,7 @@ public class YAHTEZZGame {
             }
 
             if (usedChance && !scored) {
-                message = "You've already used your chance. Better luck next Coin!";
+                message = "You've already used your chance. Better luck next roll!";
                 JO.showMessageDialog(null, "Your dice are: \n" + dice1 + "\n" + dice2 + "\n" + dice3 + "\n" + dice4 + "\n" + dice5 + "\n\n" + message + "\n\nYour score is currently " + getScore() + ". \nYou now have " + turnsLeft + " turns left.");
             }
 
