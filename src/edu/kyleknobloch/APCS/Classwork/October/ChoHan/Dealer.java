@@ -1,21 +1,26 @@
 package edu.kyleknobloch.APCS.Classwork.October.ChoHan;
 /**
-   Dealer class for the game of ChoHan
+   Dealer class for the game of Cho-Han
 */
    
-public class Dealer
-{
+public class Dealer {
    private int die1Value;  // The value of die #1
    private int die2Value;  // The value of die #2
+   private int die3Value;  // The value of die #3
+   private int die4Value;  // The value of die #4
+
+   private String cheepResult;
    
    /**
       Constructor
    */
    
-   public Dealer()
-   {
+   public Dealer() {
       die1Value = 0;
       die2Value = 0;
+      die3Value = 0;
+      die4Value = 0;
+      cheepResult = "";
    }
    
    /**
@@ -23,17 +28,20 @@ public class Dealer
       their values.
    */
    
-   public void rollDice()
-   {
+   public void rollDice() {
       final int SIDES = 6; // Number of sides for the dice
       
       // Create the two dice. (This also rolls them.)
-      ChoHanDie choHanDie1 = new ChoHanDie(SIDES);
-      ChoHanDie choHanDie2 = new ChoHanDie(SIDES);
+      ChoHanDie die1 = new ChoHanDie(SIDES);
+      ChoHanDie die2 = new ChoHanDie(SIDES);
+      ChoHanDie die3 = new ChoHanDie(SIDES);
+      ChoHanDie die4 = new ChoHanDie(SIDES);
       
       // Record their values.
-      die1Value = choHanDie1.getValue();
-      die2Value = choHanDie2.getValue();
+      die1Value = die1.getValue();
+      die2Value = die2.getValue();
+      die3Value = die3.getValue();
+      die4Value = die4.getValue();
    }
    
    /**
@@ -42,21 +50,11 @@ public class Dealer
       @return Either "Cho (even)" or "Han (odd)"
    */
    
-   public String getChoOrHan()
-   {
-      String result; // To hold the result
-      
+   public int getChoOrHan() {
       // Get the sum of the dice.
-      int sum = die1Value + die2Value;
-      
-      // Determine even or odd.
-      if (sum % 2 == 0)
-         result = "Cho (even)";
-      else
-         result = "Han (odd)";
-      
-      // Return the result.
-      return result;
+      int sum = die1Value + die2Value + die3Value + die4Value;
+
+      return sum;
    }
    
    /**
@@ -65,19 +63,28 @@ public class Dealer
       @return The die1Value field
    */
    
-   public int getDie1Value()
-   {
-      return die1Value;
+   public int getDieValue(int dieNumber) {
+      int value = 0;
+      
+      switch ( dieNumber )
+      {
+         case 1:
+               value = die1Value;
+               break;
+         case 2:
+               value = die2Value;
+               break;
+         case 3:
+               value = die3Value;
+               break;
+         case 4:
+               value = die4Value;
+               break;
+         default:
+               value = 0;
+      }  
+      
+      return value;
    }
 
-   /**
-      The getDie2Value method returns the value of
-      die #2.
-      @return The die2Value field
-   */
-   
-   public int getDie2Value()
-   {
-      return die2Value;
-   }
 }

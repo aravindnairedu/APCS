@@ -3,8 +3,7 @@ import java.util.Scanner;
 
 public class ChoHan
 {
-   public static void main(String[] args)
-   {
+   public static void main(String[] args) {
       final int MAX_ROUNDS = 5;  // Number of rounds
       String player1Name;        // First player's name
       String player2Name;        // Second player's name
@@ -54,13 +53,19 @@ public class ChoHan
       @param player2 Player #2 object
    */
    
-   public static void roundResults(Dealer dealer, Player player1,
-                                   Player player2)
-   {
+   public static void roundResults(Dealer dealer, Player player1, Player player2) {
       // Show the dice values.
-      System.out.printf("The dealer rolled %d and %d.\n",
-                        dealer.getDie1Value(), dealer.getDie2Value());
-      System.out.printf("Result: %s\n", dealer.getChoOrHan());
+      System.out.printf("The dealer rolled: ");
+      for ( int i = 1; i <=4; i++)
+      {
+         if ( i < 4 )
+            System.out.print("" + dealer.getDieValue(i) + ", ");
+         else
+            System.out.print("" + dealer.getDieValue(i) + "");
+      }
+       System.out.print(" = " + dealer.getChoOrHan() + ".\n");
+        
+      //System.out.printf("Result: %s\n", dealer.getChoOrHan());
       
       // Check each player's guess and award points.
       checkGuess(player1, dealer);
@@ -74,22 +79,36 @@ public class ChoHan
       @param dealer The Dealer object.
    */
 
-   public static void checkGuess(Player player, Dealer dealer)
-   {
-      final int POINTS_TO_ADD = 1; // Points to award winner
-      String guess = player.getGuess();           // Player's guess
-      String choHanResult = dealer.getChoOrHan(); // Cho or Han
+   public static void checkGuess(Player player, Dealer dealer) {
+      final int POINTS_TO_ADD = 1;                // Points to award winner
+      String guess = player.getCheepGuess();           // Player's guess
+      int choHanResult = dealer.getChoOrHan(); // Cho or Han
+
       
       // Display the player's guess.
-      System.out.printf("The player %s guessed %s.\n", 
-                        player.getName(), player.getGuess());
+      System.out.println("\nThe player " + player.getName() + " rolled " + player.diceResult() + " = " + player.getSum() + ".");
+      System.out.printf("The player %s guessed %s.\n",
+              player.getName(), player.getGuess());
       
       // Award points if the player guessed correctly.
-      if (guess.equalsIgnoreCase(choHanResult))
-      {
-         player.addPoints(POINTS_TO_ADD);
-         System.out.printf("Awarding %d point(s) to %s.\n",
-                           POINTS_TO_ADD, player.getName());
+      if (guess.equalsIgnoreCase("high")) {
+          if (choHanResult < player.getSum()) {
+              player.addPoints(POINTS_TO_ADD);
+              System.out.printf("Awarding %d point(s) to %s.\n",
+                      POINTS_TO_ADD, player.getName());
+          }
+          else {
+              System.out.println("No points were given to" + player.getName() + ".");
+          }
+      }
+      if (guess.equalsIgnoreCase("low")) {
+          if (choHanResult >= player.getSum()) {
+              player.addPoints(POINTS_TO_ADD);
+              System.out.printf("Awarding %d point(s) to %s.\n",
+                      POINTS_TO_ADD, player.getName());
+          } else {
+           System.out.println("No points were given to" + player.getName() + ".");
+          }
       }
    }
 
@@ -99,8 +118,7 @@ public class ChoHan
       @param player2 Player #2
    */
    
-   public static void displayGrandWinner(Player player1, Player player2)
-   {
+   public static void displayGrandWinner(Player player1, Player player2) {
       System.out.println("----------------------------");
       System.out.println("Game over. Here are the results:");
       System.out.printf("%s: %d points.\n", player1.getName(), 
