@@ -4,8 +4,15 @@
 
 * Classwork
   * September
-   * Thing
+    * Challenge
+    * Files
+    * Numbers
+    * Random
+    * TesterProjects
+      * _Classworks with Projects_ 
   * October
+    * Callenge
+    * ChoHan
 * Homework
   * September 
   * October
