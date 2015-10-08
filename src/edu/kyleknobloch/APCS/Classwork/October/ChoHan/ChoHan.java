@@ -1,6 +1,7 @@
 package edu.kyleknobloch.APCS.Classwork.October.ChoHan;
 import java.util.Scanner;
 
+
 public class ChoHan
 {
    public static void main(String[] args) {
