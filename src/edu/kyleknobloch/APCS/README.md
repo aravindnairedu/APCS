@@ -3,12 +3,12 @@
 #### Pacakges ####
 
 * Classwork
-** September
-*** Thing
-** October
+..* September
+...* Thing
+..* October
 * Homework
-** September 
-** October
+..* September 
+..* October
 * Notes
 * Students
-** Toby
+..* Toby
