@@ -10,25 +10,22 @@ public class Dealer {
    private int die4Value;  // The value of die #4
 
    private String cheepResult;
-   
-   /**
-      Constructor
-   */
+
    
    public Dealer() {
+      //Default Constructor
+
+      //Set all values
       die1Value = 0;
       die2Value = 0;
       die3Value = 0;
       die4Value = 0;
       cheepResult = "";
    }
-   
-   /**
-      The rollDice method rolls the dice and saves
-      their values.
-   */
-   
+
+
    public void rollDice() {
+       //The rollDice method rolls the dice and saves their values.
       final int SIDES = 6; // Number of sides for the dice
       
       // Create the two dice. (This also rolls them.)
