@@ -1,3 +1,5 @@
+package edu.kyleknobloch.APCS.Students.Toby;
+import edu.kyleknobloch.APCS.Students.Toby.Die;
 import javax.swing.*;
 public class YAHTEEZ {
 
