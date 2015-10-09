@@ -6,11 +6,11 @@ import com.goosejs.gengine.components.ButtonComponent;
 import com.goosejs.gengine.graphics.GraphicsWrapper;
 import com.goosejs.gengine.graphics.gImage;
 import com.goosejs.gengine.util.GameTime;
-import javax.swing.*;
+import javax.swing.JOptionPane;
 import java.awt.event.KeyEvent;
 import java.math.BigDecimal;
 
-public class MemeClicker extends GameBase
+public class FredClicker extends GameBase
 {
     GameTime gt = new GameTime(0, 60, 60);
 
@@ -19,15 +19,22 @@ public class MemeClicker extends GameBase
     long clicksPerClick = 10000;
     long initTime;
 
+    int button3I = 8;
 
-    gImage image = new gImage("/test.png");
-    gImage image2 = new gImage("/pepe.png");
-    gImage image3 = new gImage("/spodermen.png");
+
+    gImage mainImage = new gImage("/test.png");
+    gImage image = new gImage("/pepe.png");
+    gImage image2 = new gImage("/spodermen.png");
+    gImage image3 = new gImage("/jewsdidthis.gif");
+    gImage image4 = new gImage("/themultiplyer.jpg");
 
     private Game game = new Game("Blank Template", 1366, 768);
     private ButtonComponent mainButton;
     private ButtonComponent itemButton;
     private ButtonComponent itemButton2;
+    private ButtonComponent itemButton3;
+    private ButtonComponent itemButton4;
+    private ButtonComponent ItemButton4;
     private ButtonComponent saveButton;
 
     int mouseX, mouseY = 0;
@@ -36,10 +43,12 @@ public class MemeClicker extends GameBase
 
     protected long costItem1 = 75;
     protected long costItem2 = 400;
+    protected long costItem3 = 950;
+    protected long costItem4 = 50000;
 
     public static void main(String args[])
     {
-        new MemeClicker().start();
+        new FredClicker().start();
     }
 
     public void start()
@@ -47,17 +56,23 @@ public class MemeClicker extends GameBase
         game.lockFramesToUpdates();
         game.setGameBase(this);
 
-        mainButton = new ButtonComponent(game.getWidth()/2 - image.getWidth()/2, game.getHeight()/2 - image.getHeight()/2, image.getWidth(), image.getHeight(), image);
-        itemButton = new ButtonComponent(1050, 100, image2.getWidth(), image2.getHeight(), image2);
-        itemButton2 = new ButtonComponent(1050, 150, image2.getWidth(), image2.getHeight(), image3);
+        mainButton = new ButtonComponent(game.getWidth()/2 - mainImage.getWidth()/2, game.getHeight()/2 - mainImage.getHeight()/2, mainImage.getWidth(), mainImage.getHeight(), mainImage);
+        itemButton = new ButtonComponent(1050, 100, image.getWidth(), image.getHeight(), image);
+        itemButton2 = new ButtonComponent(1050, 150, image2.getWidth(), image2.getHeight(), image2);
+        itemButton3 = new ButtonComponent(900, 250, image3.getWidth(), image3.getHeight(), image3);
+        itemButton4 = new ButtonComponent(900, 500, image4.getWidth(), image4.getHeight(), image4);
 
         game.getInputManager().registerMouseClickListener(mainButton);
         game.getInputManager().registerMouseClickListener(itemButton);
         game.getInputManager().registerMouseClickListener(itemButton2);
+        game.getInputManager().registerMouseClickListener(itemButton3);
+        game.getInputManager().registerMouseClickListener(itemButton4);
 
         mainButton.registerMouseClickEvent(mouseEvent -> click());
         itemButton.registerMouseClickEvent(mouseEvent -> buy());
         itemButton2.registerMouseClickEvent(mouseEvent -> buyItem2());
+        itemButton3.registerMouseClickEvent(mouseEvent -> buyItem3());
+        itemButton4.registerMouseClickEvent(mouseEvent -> buyItem4());
 
         game.startGame();
     }
@@ -68,7 +83,7 @@ public class MemeClicker extends GameBase
     {
         game.registerGuiComponent(mainButton);
         game.registerGuiComponent(itemButton);
-        JOptionPane.showMessageDialog(null, "Welcome!");
+        JOptionPane.showMessageDialog(null, "Welcome you scrub");
         initTime = System.currentTimeMillis();
     }
 
@@ -82,6 +97,10 @@ public class MemeClicker extends GameBase
             itemButton.render(g);
         if (clicks.compareTo(new BigDecimal(costItem2)) == 1 || clicks.compareTo(new BigDecimal(costItem2)) == 0)
             itemButton2.render(g);
+        if (clicks.compareTo(new BigDecimal(costItem3)) == 1 || clicks.compareTo(new BigDecimal(costItem3)) == 0)
+            itemButton3.render(g);
+        if (clicks.compareTo(new BigDecimal(costItem4)) == 1 || clicks.compareTo(new BigDecimal(costItem4)) == 0)
+            itemButton4.render(g);
 
         g.drawString("X: " + mouseX + " Y: " + mouseY, 10, 10);
         g.drawHorizontallyCenteredString("Clicks:" + clicks, game.getWidth() / 2, 50);
@@ -158,6 +177,22 @@ public class MemeClicker extends GameBase
             clicksPerSecond = clicksPerSecond.add(new BigDecimal(4));
             clicks = clicks.subtract(new BigDecimal(costItem2));
             costItem2 *= 1.4;
+        }
+    }
+    public void buyItem3() {
+        if (clicks.compareTo(new BigDecimal(costItem3)) == 1 || clicks.compareTo(new BigDecimal(costItem3)) == 0) {
+            clicksPerSecond = clicksPerSecond.add(new BigDecimal(button3I));
+            clicks = clicks.subtract(new BigDecimal(costItem3));
+            costItem3 *= 1.4;
+            button3I = button3I * 2;
+        }
+    }
+    public void buyItem4 () {
+        //multiplyer
+        if (clicks.compareTo(new BigDecimal(costItem4)) == 1 || clicks.compareTo(new BigDecimal(costItem4)) == 0) {
+            clicksPerSecond = clicksPerSecond.add(clicksPerSecond.multiply(new BigDecimal(2)));
+            clicks = clicks.subtract(new BigDecimal(costItem4));
+            costItem3 *= 750;
         }
     }
 
