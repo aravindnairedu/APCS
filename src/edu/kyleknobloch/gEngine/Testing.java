@@ -23,9 +23,9 @@ public class Testing extends GameBase
 
 
 
-    gImage mainImage = new gImage("/test.png");
-    gImage image3 = new gImage("/pepe.png");
-    gImage image2 = new gImage("/spodermen.png");
+    gImage image = new gImage("/test.png");
+    gImage image2 = new gImage("/pepe.png");
+    gImage image3 = new gImage("/spodermen.png");
 
     private Game game = new Game("Blank Template", 1366, 768);
     private ButtonComponent mainButton;
@@ -48,9 +48,9 @@ public class Testing extends GameBase
         game.lockFramesToUpdates();
         game.setGameBase(this);
 
-        mainButton = new ButtonComponent(game.getWidth()/2 - mainImage.getWidth()/2, game.getHeight()/2 - mainImage.getHeight()/2, mainImage.getWidth(), mainImage.getHeight(), mainImage);
-        itemButton = new ButtonComponent(1050, 100, image3.getWidth(), image3.getHeight(), image3);
-        itemButton2 = new ButtonComponent(1050, 150, image3.getWidth(), image3.getHeight(), image2);
+        mainButton = new ButtonComponent(game.getWidth()/2 - image.getWidth()/2, game.getHeight()/2 - image.getHeight()/2, image.getWidth(), image.getHeight(), image);
+        itemButton = new ButtonComponent(1050, 100, image2.getWidth(), image2.getHeight(), image2);
+        itemButton2 = new ButtonComponent(1050, 150, image2.getWidth(), image2.getHeight(), image3);
 
         game.getInputManager().registerMouseClickListener(mainButton);
         game.getInputManager().registerMouseClickListener(itemButton);
