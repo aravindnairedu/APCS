@@ -9,14 +9,13 @@ public class CoinToss {
 
     public  CoinToss() {
         /*
-         * Default Contructor | toss the coin then display "Heads" or "Tails"
+         * Default Contructor | All I do is initilize
          */
 
-        toss();
-        System.out.println(getSideUp());
+        sideUp = "please roll";
     }
 
-    private void toss() {
+    public void toss() {
         /*
          * Toss the coin.
          */

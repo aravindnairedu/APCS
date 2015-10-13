@@ -17,18 +17,23 @@ public class TestScores {
         //get the 5 letter grades
         input = JO.showInputDialog(null, "Please enter grade 1");
         grade1 = Double.parseDouble(input);
+        JO.showMessageDialog(null, grade1 + ": " + determineLetterGrade(grade1));
 
         input = JO.showInputDialog(null, "Please enter grade 2");
         grade2 = Double.parseDouble(input);
+        JO.showMessageDialog(null, grade2 + ": " + determineLetterGrade(grade2));
 
         input = JO.showInputDialog(null, "Please enter grade 3");
         grade3 = Double.parseDouble(input);
+        JO.showMessageDialog(null, grade3 + ": " + determineLetterGrade(grade3));
 
         input = JO.showInputDialog(null, "Please enter grade 4");
         grade4 = Double.parseDouble(input);
+        JO.showMessageDialog(null, grade4 + ": " + determineLetterGrade(grade4));
 
         input = JO.showInputDialog(null, "Please enter grade 5");
         grade5 = Double.parseDouble(input);
+        JO.showMessageDialog(null, grade5 + ": " + determineLetterGrade(grade5));
 
 
         calcAvg(); //find the avg

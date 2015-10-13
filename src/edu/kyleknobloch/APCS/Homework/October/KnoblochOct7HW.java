@@ -35,9 +35,10 @@ public class KnoblochOct7HW {
         int heads = 0 ;
         int tails = 0;
         int i = 0;
+        CoinToss CT = new CoinToss();
         do {
             //toss the coin
-            CoinToss CT = new CoinToss();
+            CT.toss();
 
             //Heads & tails counter
             if (CT.getSideUp() == "Heads") {
