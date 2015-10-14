@@ -29,7 +29,7 @@ public class FredClicker extends GameBase
     gImage image2 = new gImage("/spodermen.png");
     gImage image3 = new gImage("/jewsdidthis.gif");
     gImage image4 = new gImage("/themultiplyer.jpg");
-    //gImage image5 = new gImage("");
+    gImage image5 = new gImage("/alphabet.png");
 
     private Game game = new Game("Blank Template", 1366, 768);
 
@@ -57,6 +57,10 @@ public class FredClicker extends GameBase
     protected long costItem5 = 1000000;
 
 
+    //couting how many perceses we have made
+    private long numberOfPercheses = 0;
+
+
     public static void main(String args[]) {
         /**
          * start
@@ -78,7 +82,7 @@ public class FredClicker extends GameBase
         itemButton2 = new ButtonComponent(1050, 150, image2.getWidth(), image2.getHeight(), image2);
         itemButton3 = new ButtonComponent(900, 250, image3.getWidth(), image3.getHeight(), image3);
         itemButton4 = new ButtonComponent(900, 500, image4.getWidth(), image4.getHeight(), image4);
-        //itemButton5 = new ButtonComponent(450, 500, image5.getWidth(), image5.getHeight(), image5);
+        itemButton5 = new ButtonComponent(450, 500, image5.getWidth(), image5.getHeight(), image5);
 
         //Setup the clicking
         game.getInputManager().registerMouseClickListener(mainButton);
@@ -86,7 +90,7 @@ public class FredClicker extends GameBase
         game.getInputManager().registerMouseClickListener(itemButton2);
         game.getInputManager().registerMouseClickListener(itemButton3);
         game.getInputManager().registerMouseClickListener(itemButton4);
-        //game.getInputManager().registerMouseClickListener(itembutton5);
+        game.getInputManager().registerMouseClickListener(itemButton5);
 
         //setup clicking (2)
         mainButton.registerMouseClickEvent(mouseEvent -> click());
@@ -94,7 +98,7 @@ public class FredClicker extends GameBase
         itemButton2.registerMouseClickEvent(mouseEvent -> buyItem2());
         itemButton3.registerMouseClickEvent(mouseEvent -> buyItem3());
         itemButton4.registerMouseClickEvent(mouseEvent -> buyItem4());
-        //itemButton5.registerMouseClickEvent(mouseEvent -> itemButton5());
+        itemButton5.registerMouseClickEvent(mouseEvent -> buyItem5());
 
         //Start the game
         game.startGame();
@@ -132,7 +136,7 @@ public class FredClicker extends GameBase
         if (clicks.compareTo(new BigDecimal(costItem4)) == 1 || clicks.compareTo(new BigDecimal(costItem4)) == 0)
             itemButton4.render(g);
         if (clicks.compareTo(new BigDecimal(costItem5)) == 1 || clicks.compareTo(new BigDecimal(costItem4)) == 0)
-            //itemButton5.render(g);
+            itemButton5.render(g);
 
         //Draw some words
         g.drawString("X: " + mouseX + " Y: " + mouseY, 10, 10);
@@ -253,6 +257,9 @@ public class FredClicker extends GameBase
     }
 
     public void buyItem5 () {
+        if (clicks.compareTo(new BigDecimal(costItem5)) == 1 || clicks.compareTo(new BigDecimal(costItem5)) == 0) {
+            //cps = cps * (cps *
+        }
 
     }
 
