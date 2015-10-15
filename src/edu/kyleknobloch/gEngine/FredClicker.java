@@ -31,6 +31,7 @@ public class FredClicker extends GameBase
     gImage image4 = new gImage("/themultiplyer.jpg");
     gImage image5 = new gImage("/alphabet.png");
 
+
     private Game game = new Game("Blank Template", 1366, 768);
 
 
@@ -43,11 +44,13 @@ public class FredClicker extends GameBase
     private ButtonComponent itemButton5;
     private ButtonComponent saveButton;
 
+
     //More ints
     int button3I = 8;
     int mouseX, mouseY = 0;
     int place = 200;
     boolean dispUp = false;
+
 
     //item costs
     protected long costItem1 = 75;
@@ -82,7 +85,7 @@ public class FredClicker extends GameBase
         itemButton2 = new ButtonComponent(1050, 150, image2.getWidth(), image2.getHeight(), image2);
         itemButton3 = new ButtonComponent(900, 250, image3.getWidth(), image3.getHeight(), image3);
         itemButton4 = new ButtonComponent(900, 500, image4.getWidth(), image4.getHeight(), image4);
-        itemButton5 = new ButtonComponent(450, 500, image5.getWidth(), image5.getHeight(), image5);
+        itemButton5 = new ButtonComponent(350, 600, image5.getWidth(), image5.getHeight(), image5);
 
         //Setup the clicking
         game.getInputManager().registerMouseClickListener(mainButton);
@@ -135,8 +138,10 @@ public class FredClicker extends GameBase
             itemButton3.render(g);
         if (clicks.compareTo(new BigDecimal(costItem4)) == 1 || clicks.compareTo(new BigDecimal(costItem4)) == 0)
             itemButton4.render(g);
-        if (clicks.compareTo(new BigDecimal(costItem5)) == 1 || clicks.compareTo(new BigDecimal(costItem4)) == 0)
+        if (clicks.compareTo(new BigDecimal(costItem5)) == 1 || clicks.compareTo(new BigDecimal(costItem5)) == 0)
             itemButton5.render(g);
+
+        String message = "item one: " + costItem1 + "\nitem 2: " + costItem2 + "\nitem 3: " + costItem4 + "\nitem 4: " + costItem4 + "\nitem 5: " + costItem5;
 
         //Draw some words
         g.drawString("X: " + mouseX + " Y: " + mouseY, 10, 10);
@@ -144,6 +149,7 @@ public class FredClicker extends GameBase
         g.drawHorizontallyCenteredString("Current Clicks Per Second:" + clicksPerSecond, game.getWidth() / 2, 75);
         g.drawHorizontallyCenteredString("Upgrades:", 1120, 70);
         g.drawHorizontallyCenteredString("FPS: " + gt.framesPerSecond, 1300, 20);
+        g.drawHorizontallyCenteredString(message, 800, 30);
 
         if (dispUp && (place >= 120)) {
             g.drawHorizontallyCenteredString("+ " + clicksPerClick, game.getWidth()/2, place);
@@ -221,8 +227,8 @@ public class FredClicker extends GameBase
      */
 
     public void buy() {
-        if (clicks.compareTo(new BigDecimal(costItem1)) == 1 || clicks.compareTo(new BigDecimal(costItem1)) == 0)
-        {
+        if (clicks.compareTo(new BigDecimal(costItem1)) == 1 || clicks.compareTo(new BigDecimal(costItem1)) == 0) {
+            numberOfPercheses++;
             clicksPerSecond = clicksPerSecond.add(new BigDecimal(.5));
             clicks = clicks.subtract(new BigDecimal(costItem1));
             costItem1 *= 1.4;
@@ -230,8 +236,8 @@ public class FredClicker extends GameBase
     }
 
     public void buyItem2() {
-        if (clicks.compareTo(new BigDecimal(costItem2)) == 1 || clicks.compareTo(new BigDecimal(costItem2)) == 0)
-        {
+        if (clicks.compareTo(new BigDecimal(costItem2)) == 1 || clicks.compareTo(new BigDecimal(costItem2)) == 0) {
+            numberOfPercheses++;
             clicksPerSecond = clicksPerSecond.add(new BigDecimal(4));
             clicks = clicks.subtract(new BigDecimal(costItem2));
             costItem2 *= 1.4;
@@ -250,6 +256,7 @@ public class FredClicker extends GameBase
     public void buyItem4 () {
         //multiplyer
         if (clicks.compareTo(new BigDecimal(costItem4)) == 1 || clicks.compareTo(new BigDecimal(costItem4)) == 0) {
+            numberOfPercheses++;
             clicksPerSecond = clicksPerSecond.add(clicksPerSecond.multiply(new BigDecimal(2)));
             clicks = clicks.subtract(new BigDecimal(costItem4));
             costItem3 *= 750;
@@ -258,7 +265,15 @@ public class FredClicker extends GameBase
 
     public void buyItem5 () {
         if (clicks.compareTo(new BigDecimal(costItem5)) == 1 || clicks.compareTo(new BigDecimal(costItem5)) == 0) {
-            //cps = cps * (cps *
+            numberOfPercheses++;
+
+            //cps = cps * (cps * numberOfPercheses) + 1000;
+            BigDecimal perenthesies = clicksPerSecond.multiply(new BigDecimal(numberOfPercheses));
+            clicksPerSecond = clicksPerSecond.multiply(perenthesies).add(new BigDecimal(1000));
+
+            clicks = clicks.subtract(new BigDecimal(costItem5));
+            costItem5 *= numberOfPercheses;
+            costItem5 = costItem5 * 10;
         }
 
     }
