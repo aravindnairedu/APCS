@@ -27,7 +27,7 @@ public class Payroll {
     /**
      * Calculate grossPay
      *
-     * @return [int] gross pay
+     * @return [double] gross pay
      */
 
     public double grossPay () {

@@ -57,6 +57,7 @@ public class Dealer {
    /**
       The getDie1Value method returns the value of
       die #1.
+      @pram dieNumber - what the die rolled (1-6)
       @return The die1Value field
    */
    
