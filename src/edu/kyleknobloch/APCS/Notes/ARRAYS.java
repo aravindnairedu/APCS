@@ -11,9 +11,6 @@ public class ARRAYS {
 
     public static void main(String[] args) {
 
-
-
-
         /**
          *
          * Arrays are contiguous Blocks of Memory
@@ -54,5 +51,16 @@ public class ARRAYS {
 
         System.out.println(me[0] + me[1] + me[2]);
 
+
+        ARRAYS arrays; //Refrence
+
+        int Array[];
+
+
+
+
     }
 }
+
+
+
