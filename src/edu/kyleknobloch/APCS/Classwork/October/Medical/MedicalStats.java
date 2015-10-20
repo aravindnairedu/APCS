@@ -1,17 +1,16 @@
 package edu.kyleknobloch.APCS.Classwork.October.Medical;
 
-/**
- * Created by kyleknobloch on 10/14/15,
- * For
- * *
- * Actions:
- */
+
 public class MedicalStats {
 
     private int activeHR;
     private int restingHR;
 
-
+    /**
+     * Default Constructor
+     * @PRE  that aHR and rHR have been created
+     * @POST Will set aHR and rHR to -1
+     */
     public MedicalStats () {
         //default constructor
 
@@ -20,6 +19,12 @@ public class MedicalStats {
 
     }
 
+    /**
+     * Takes
+     * @param int Active HR
+     * @param int Resting HR
+     * @POST sets the aHR and rHR in the class to whatever you took in @pram
+     */
     public MedicalStats (int aHR, int rHR) {
         //constructor with 2 ints to set to aHR and rHR
 
@@ -31,13 +36,19 @@ public class MedicalStats {
 
     /**
      * toString
+     * @PRE  ActiveHR and RestingHR are set
+     * @post returns a string that has the Active and Resting heartrates in String format.
      */
+    @Override
     public String toString () {
         return "Active Heart Rate: " + getActiveHR() + "\nResting Heart Rate: " + getRestingHR();
     }
 
     /**
      * get methods
+     *
+     * @pre  none
+     * @post Returns that value.
      */
 
     public int getActiveHR() {
@@ -51,7 +62,11 @@ public class MedicalStats {
 
     /**
      * set methods
+     *
+     * @pram an int
+     * @POST sets the values in the class
      */
+
 
     public void setActiveHR(int activeHR) {
         this.activeHR = activeHR;
