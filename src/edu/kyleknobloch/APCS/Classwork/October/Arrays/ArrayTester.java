@@ -8,12 +8,17 @@ public class ArrayTester {
 
         ArrayConstructors ac = new ArrayConstructors();
 
+        ArrayConstructors ac1 = new ArrayConstructors("rand");
+
+        System.out.println(ac1.toString());
+
         ac.arrayAllOne();
         System.out.println(ac.toString());
         ac.arrayRandomNumbers();
         System.out.println(ac.toString());
-        ac.arrayBooleon();
+        ac.arrayBoolean();
         System.out.println(ac.toStringBoolean());
 
     }
 }
+

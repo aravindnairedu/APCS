@@ -18,6 +18,23 @@ public class ArrayConstructors {
     }
 
     /**
+     * @param type What type of array are you looking for?
+     * @return none
+     */
+    public ArrayConstructors (String type) {
+
+        if (type.equalsIgnoreCase("boolean")) {
+            arrayBoolean();
+        }
+        else if (type.equalsIgnoreCase("rand") || type.equalsIgnoreCase("int")){
+            arrayRandomNumbers();
+        }
+        else {
+            arrayAllOne();
+        }
+    }
+
+    /**
      * @PRE  That the array arrays has ben created
      * @POST none
      */
@@ -48,7 +65,7 @@ public class ArrayConstructors {
      * @PRE  That the booleans arrays has ben created
      * @POST Randomly sets array booleons to true or false.
      */
-    public void arrayBooleon () {
+    public void arrayBoolean () {
 
         for (int i = 0; i <= 99; i++) {
             int n = random(2);

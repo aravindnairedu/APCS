@@ -4,9 +4,6 @@ package edu.kyleknobloch.APCS.LoveMeLikeYouDo;
 public class Love {
 
     public static void main (String args[]) {
-
-
-
         Me me = new Me();
         boolean Me = true;
         boolean You = true;
