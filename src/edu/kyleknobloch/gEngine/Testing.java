@@ -1,4 +1,6 @@
-/** package edu.kyleknobloch.gEngine;
+/**
+
+package edu.kyleknobloch.gEngine;
 
 import com.goosejs.gengine.Game;
 import com.goosejs.gengine.GameBase;
@@ -162,4 +164,4 @@ public class Testing extends GameBase
 
 
 }
-**/
+*/
