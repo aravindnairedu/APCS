@@ -90,14 +90,14 @@ public class ArrayListsTester {
                 else if (position >= 0)
                     System.out.println("Thing " + input + " is at position " + position + "\n");
                 else if (position == -2)
-                    System.out.println("YOU BROKE IT! FUCK THE JEWS.");
+                System.out.println("YOU BROKE IT!");
 
             } else if (input.equalsIgnoreCase("exit")) {
                 System.out.println("Bye bye!");
                 run = false;
-            } else {
+            } else
                 System.out.println("Sorry, I didn't understand that...");
-            }
+
 
         } while (run);
 
