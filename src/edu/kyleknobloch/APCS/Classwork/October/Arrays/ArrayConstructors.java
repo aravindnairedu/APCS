@@ -34,6 +34,7 @@ public class ArrayConstructors {
         }
     }
 
+
     /**
      * @PRE  That the array arrays has ben created
      * @POST none
@@ -114,7 +115,7 @@ public class ArrayConstructors {
      * @PRE  @param
      * @POST @return
      * @param n how high is the random number generator will create numbers
-     * @return a number from the random number generator
+     * @return number from the random number generator
      */
     public int random (int n) {
         Random r = new Random();
