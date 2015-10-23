@@ -7,11 +7,12 @@ public class ArrayListsTester {
     public static ArrayLists array = new ArrayLists();
     public static Scanner console = new Scanner(System.in);
 
+    /**
+     * The main menu
+     */
     public static void main (String args[]) {
 
         String input;
-        String input1;
-        String input2;
         boolean run = true;
 
 
@@ -53,7 +54,9 @@ public class ArrayListsTester {
     }
 
 
-
+    /**
+     * Add an item to the array from Beginning, end or a specific value
+     */
     public static void add () {
         String input;
         String input1;
@@ -93,6 +96,9 @@ public class ArrayListsTester {
         }
     }
 
+    /**
+     * Remove item or position from the array
+     */
     public static void remove () {
         String input;
         String input1;
@@ -115,6 +121,9 @@ public class ArrayListsTester {
 
     }
 
+    /**
+     * Search for an item in the array
+     */
     public static void search () {
         String input;
 
