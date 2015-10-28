@@ -1,67 +1,41 @@
 package edu.kyleknobloch.APCS.Classwork.October.Challenges;
 
+import java.util.ArrayList;
+
 /**
- * Created by kyleknobloch on 10/28/15,
- * For
- * *
- * Actions:
+ * Answers
  */
 public class Answer {
 
 
+    public ArrayList<Integer> answers = new ArrayList<>();
+
     public void Answers () {
-        //I do nothing
+        answers.add(0, -1);
+        answers.add(1, 2);
+        answers.add(2, 1);
+        answers.add(3, 3);
+        answers.add(4, 4);
+        answers.add(5, 1);
+        answers.add(6, 4);
+        answers.add(7, 1);
+        answers.add(8, 2);
+        answers.add(9, 4);
+        answers.add(10, 0);
     }
 
 
     /**
-     * Give the answer to the question
-     * @pre none
-     * @return the answer in Int form
+     * Get the answer to the question
+     * @param index the question number
+     * @return the question's answer in Int form
      */
-    public int question1 () {
-        return 2;
+    public int getAnswer(int index) {
+        return answers.get(index);
     }
-
-    public int questoin2 () {
-        return 1;
-    }
-
-    public int questoin3 () {
-        return 3;
-    }
-
-    public int questoin4 () {
-        return 4;
-    }
-
-    public int questoin5 () {
-        return 1;
-    }
-
-    public int questoin6 () {
-        return 4;
-    }
-
-    public int questoin7 () {
-        return 1;
-    }
-
-    public int questoin8 () {
-        return 2;
-    }
-
-    public int questoin9 () {
-        return 4;
-    }
-
-    public int questoin10 () {
-        return 0;
-    }
-
 
     /**
-     *
+     * Check to see if the answer is correct.
      * @param correct The correct answer
      * @param answer  the player's answer
      * @return true if he was correct, false if incorrect.

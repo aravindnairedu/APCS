@@ -1,7 +1,7 @@
 package edu.kyleknobloch.APCS.Classwork.October.Challenges;
 
 /**
- *
+ * Players
  */
 public class Player {
 
