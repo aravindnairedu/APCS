@@ -10,7 +10,12 @@ public class Question {
 
     private ArrayList<String> questions = new ArrayList<>();
 
-    public void Question() {
+
+    /**
+     * pre:  The ArrayList questoins has been created
+     * post: The questions will be posted to that ArrayList
+     */
+    public Question() {
         questions.add(0, "We don't use the first one.");
         questions.add(1, "Question 1:\nWhat is Kyle's davoret color?\n1.) Red\n2.) Blue\n3.) Purple \n4.) Orange");
         questions.add(2, "Question 2:\nWhat is Kyle's least favoret color?\n1.) Red\n2.) Blue\n3.) Purple \n4.) Orange");

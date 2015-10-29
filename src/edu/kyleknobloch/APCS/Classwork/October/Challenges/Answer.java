@@ -7,10 +7,14 @@ import java.util.ArrayList;
  */
 public class Answer {
 
-
     public ArrayList<Integer> answers = new ArrayList<>();
 
-    public void Answers () {
+
+    /**
+     * pre:  The ArrayList answers has been created
+     * post: The answers will be posted to that ArrayList
+     */
+    public Answer () {
         answers.add(0, -1);
         answers.add(1, 2);
         answers.add(2, 1);
@@ -44,7 +48,7 @@ public class Answer {
 
         if (answer == correct)
             return true;
-        else if (answer == 0)
+        else if (correct == 0)
             return true;
         else
             return false;
