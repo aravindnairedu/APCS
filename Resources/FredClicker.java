@@ -1,5 +1,3 @@
-package edu.kyleknobloch.gEngine;
-
 import com.goosejs.gengine.Game;
 import com.goosejs.gengine.GameBase;
 import com.goosejs.gengine.components.ButtonComponent;
