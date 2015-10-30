@@ -17,7 +17,7 @@ public class Question {
      */
     public Question() {
         questions.add(0, "We don't use the first one.");
-        questions.add(1, "Question 1:\nWhat is Kyle's davoret color?\n1.) Red\n2.) Blue\n3.) Purple \n4.) Orange");
+        questions.add(1, "Question 1:\nWhat is Kyle's favoret color?\n1.) Red\n2.) Blue\n3.) Purple \n4.) Orange");
         questions.add(2, "Question 2:\nWhat is Kyle's least favoret color?\n1.) Red\n2.) Blue\n3.) Purple \n4.) Orange");
         questions.add(3, "Question 3:\nWho is the teacher of this class??\n1.) Mr. Files\n2.) Brendan Sheean\n3.) JOHN JAMES DRUGAN THE FORTH! \n4.) JJDRUGSIV");
         questions.add(4, "Question 4:\nWhy is this class an AP class??\n1.) Becuase\n2.) Becuase it's taught at the college level\n3.) Becuase we can \n4.) WHO GIVES A CRAP?");

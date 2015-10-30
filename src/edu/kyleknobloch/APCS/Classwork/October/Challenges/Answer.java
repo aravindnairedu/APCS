@@ -7,7 +7,7 @@ import java.util.ArrayList;
  */
 public class Answer {
 
-    public ArrayList<Integer> answers = new ArrayList<>();
+    private ArrayList<Integer> answers = new ArrayList<>();
 
 
     /**

@@ -10,10 +10,11 @@ public class Player {
 
     /**
      * Default constructor. Sets the name of the user as score would already be 0.
-     * @param name
+     * @param name the player's name
      */
     public Player (String name) {
         this.name = name;
+
     }
 
     /**
@@ -21,6 +22,7 @@ public class Player {
      */
     public void addOneToScore() {
         score++;
+
     }
 
     /**
@@ -42,6 +44,7 @@ public class Player {
             return 0;
         else
             return -1;
+
     }
 
     /**

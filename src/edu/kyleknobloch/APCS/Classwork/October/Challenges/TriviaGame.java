@@ -7,7 +7,7 @@ import javax.swing.*;
  */
 public class TriviaGame {
 
-    public static void main (String args[]) {
+    public static void main(String args[]) {
         Question questions = new Question(); //Setup my things
         Answer answers = new Answer();
         JOptionPane JO = new JOptionPane();
