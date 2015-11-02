@@ -6,27 +6,22 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
- * Created by kyleknobloch on 11/2/15,
- * For
- * *
- * Actions:
+ * World Series Champions
  */
 public class WSC {
 
-    private String file;
     private ArrayList<String> teams = new ArrayList<>();
     private int teamCount = 0;
 
 
     /**
      * Default Constructor. Takes in the file and then fills the array. That's it.
+     *
      * @param file the file's name or path
      * @throws IOException
      */
     public WSC (String file) throws IOException {
-        this.file  = file;
-        fillArrayList(this.file);
-
+        fillArrayList(file);
 
     }
 
@@ -38,8 +33,6 @@ public class WSC {
      * @throws IOException
      */
     public void fillArrayList (String filepath) throws IOException {
-        file = filepath; //reset the file name so we know it's true;
-
         File file = new File(filepath);
         int i = 0;
         Scanner filling = new Scanner(file);
@@ -52,19 +45,20 @@ public class WSC {
 
     }
 
-    /**
-     * fillArrayList() when the file is set in the class.
-     */
-    public void fillArrayList () throws IOException {
-        fillArrayList(file);
-    }
 
+    /**
+     * alias for fillArrayList(String filepath)
+     *
+     * @param file the file's path
+     * @throws IOException
+     */
     public void newFile (String file) throws IOException {
         fillArrayList(file);
     }
 
 
     /**
+     * Check to see how many times a team has won.
      *
      * @param team the team's name
      * @return how many times that team appeared in the file.
@@ -81,7 +75,5 @@ public class WSC {
 
         return teamCount;
     }
-
-
-
+    
 }
