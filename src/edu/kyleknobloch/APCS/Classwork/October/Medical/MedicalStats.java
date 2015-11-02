@@ -21,8 +21,8 @@ public class MedicalStats {
 
     /**
      * Takes
-     * @param int Active HR
-     * @param int Resting HR
+     * @param aHR Active HR
+     * @param rHR Resting HR
      * @POST sets the aHR and rHR in the class to whatever you took in @pram
      */
     public MedicalStats (int aHR, int rHR) {
