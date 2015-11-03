@@ -9,7 +9,7 @@ import java.io.IOException;
  *
  * 14. World Series Champions
  If you have downloaded this book's source code (the companion Web site is available at www.pearsonhiglicred.com/gaddis),
- you will find a file named WorltiScricsWinncrsJxt. This file contains a chronological list of the winning teams in the
+ you will find a file named WorltiSeriesWinners.txt. This file contains a chronological list of the winning teams in the
  World Scries from 1903 through 2009. (The first line in the file is the name of the team that won in 190 J, and the last
  line is the name of the team that won in 2009. Note that the World Series was not played in 1904 or 1994, so those years
  are skipped in the file.)
@@ -22,7 +22,6 @@ public class WSCTester {
         JOptionPane JO = new JOptionPane();
         WSC wsc = null;
         String input;
-        int teamCount;
 
         input = JO.showInputDialog(null, "Welcome, Check to see how many times a team/name has come up in the file. Enter a file's name.\nCurrent Files:\nWorldSeriesWinners.txt - The World Series From 1903 to 2009. Note that the World Series was not played in 1904 or 1994, those years are not included.");
 
@@ -33,12 +32,10 @@ public class WSCTester {
             System.exit(0);
         }
 
-        input = JO.showInputDialog(null, "What is the team you're searching for?");
-
-
-        teamCount = wsc.teamCount(input); //get the number of teams
-
-        JO.showMessageDialog(null, input + " won " + teamCount + " times. ");
+        do {
+            input = JO.showInputDialog(null, "What is the team you're searching for?");
+            JO.showMessageDialog(null, input + " won " + wsc.teamCount(input) + " times. ");
+        } while (!input.isEmpty());
 
 
 

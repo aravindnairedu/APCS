@@ -11,7 +11,6 @@ import java.util.Scanner;
 public class WSC {
 
     private ArrayList<String> teams = new ArrayList<>();
-    private int teamCount = 0;
 
 
     /**
@@ -65,6 +64,7 @@ public class WSC {
      */
     public int teamCount (String team) {
         //System.out.println(teams.size()); //DEBUG
+        int teamCount = 0;
 
         for (int i = 0; i < teams.size(); i++) {
             if (teams.get(i).equalsIgnoreCase(team)) {
