@@ -46,12 +46,7 @@ public class Chap4Ex12 {
      * @param s5 Store 5's sales
      */
     public Chap4Ex12 (double s1, double s2, double s3, double s4, double s5) {
-        store.add(0, -1.0);
-        store.add(1, s1);
-        store.add(2, s2);
-        store.add(3, s3);
-        store.add(4, s4);
-        store.add(5, s5);
+        setStores(s1, s2, s3, s4, s5);
 
     }
 
