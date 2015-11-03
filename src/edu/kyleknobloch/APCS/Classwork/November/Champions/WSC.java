@@ -75,5 +75,5 @@ public class WSC {
 
         return teamCount;
     }
-    
+
 }
