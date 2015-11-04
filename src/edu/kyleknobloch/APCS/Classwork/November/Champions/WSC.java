@@ -17,7 +17,7 @@ public class WSC {
     /**
      * Default Constructor. Takes in the file path and then fills the array. That's it.
      *
-     * @param file the file's name or path
+     * @param file the file's path
      * @throws IOException
      *
      * Will fill the ArrayList with the file's contents.
@@ -36,8 +36,8 @@ public class WSC {
      */
     public void fillArrayList (String filepath) throws IOException {
         File file = new File(filepath);
-        int i = 0;
         Scanner filling = new Scanner(file);
+        int i = 0;
 
         while (filling.hasNext()) {
             teams.add(i, filling.nextLine());
@@ -62,8 +62,8 @@ public class WSC {
         //System.out.println(teams.size()); //DEBUG
         int teamCount = 0;
 
-        for (int i = 0; i < teams.size(); i++) {
-            if (teams.get(i).equalsIgnoreCase(team)) {
+        for (String teamsString : teams) { //this is a for each statment
+            if (teamsString.equalsIgnoreCase(team)) {
                 //System.out.println(teams.get(i)); //DEBUG
                 teamCount++;
             }
