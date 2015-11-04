@@ -38,20 +38,5 @@ public class Answer {
         return answers.get(index);
     }
 
-    /**
-     * Check to see if the answer is correct.
-     * @param correct The correct answer
-     * @param answer  the player's answer
-     * @return true if he was correct, false if incorrect.
-     */
-    public static boolean checkCorrect (int correct, int answer) {
 
-        if (answer == correct)
-            return true;
-        else if (correct == 0)
-            return true;
-        else
-            return false;
-
-    }
 }

@@ -25,27 +25,6 @@ public class Player {
 
     }
 
-    /**
-     * Figure out the winner by checking each player's scores
-     * @param score1 First score to check
-     * @param score2 Second score to check
-     * @return Sents back
-     *         1: Player one wins
-     *         2: Player two wins
-     *         0: both win
-     *        -1: it's broken
-     */
-    public int calcWinner (int score1, int score2) {
-        if (score1 > score2)
-            return 1;
-        else if (score2 > score1)
-            return  2;
-        else if (score1 == score2)
-            return 0;
-        else
-            return -1;
-
-    }
 
     /**
      * Get methods

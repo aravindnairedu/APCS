@@ -1,6 +1,5 @@
 package edu.kyleknobloch.APCS.Classwork.October.Challenges;
 
-import javax.swing.*;
 import java.util.ArrayList;
 
 /**
@@ -37,17 +36,6 @@ public class Question {
      */
     public String getQuestion (int index) {
         return questions.get(index);
-    }
-
-
-    /**
-     *
-     * @param question What is the question?
-     * @return Returns the player's score
-     */
-    public int runQuestion(String question) {
-
-        return Integer.parseInt(JOptionPane.showInputDialog(null, question + "\n\nEnter the number that is correct."));
     }
 
 
