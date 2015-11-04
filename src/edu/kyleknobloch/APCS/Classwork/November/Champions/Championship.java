@@ -8,7 +8,7 @@ import java.util.Scanner;
 /**
  * World Series Champions
  */
-public class WSC {
+public class Championship {
     // TODO: Better menu system and more options for this like JJ said.
     // TODO: Possibly better naming?
 
@@ -22,7 +22,7 @@ public class WSC {
      *
      * Will fill the ArrayList with the file's contents.
      */
-    public WSC (String file) throws IOException {
+    public Championship (String file) throws IOException {
         fillArrayList(file);
 
     }

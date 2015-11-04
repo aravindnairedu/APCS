@@ -16,13 +16,13 @@ import java.io.IOException;
  Write a program that lets the user enter the name of a team, and then displays the number of times that team has won
  the World Series in the time period from 1903 through 2009.
  */
-public class WSCTester {
+public class ChapTester {
 
     public static void main (String args[]) throws IOException {
         // TODO: More options for things to have champions of. Example that Drugan gave us was for multiple olympics years, the models they won and in what areas they won them.
 
         JOptionPane JO = new JOptionPane();
-        WSC wsc = null;
+        Championship championship = null;
 
         //Welcome and get the file name.
         String input = JOptionPane.showInputDialog(null, "Welcome, Check to see how many times a team/name has come up in the file. " +
@@ -30,7 +30,7 @@ public class WSCTester {
                 "World Series was not played in 1904 or 1994, those years are excluded.");
 
         try {       // setup the WSC.
-            wsc = new WSC(input);
+            championship = new Championship(input);
         } catch (IOException e) {
             JOptionPane.showMessageDialog(null, "File not found. \nError Message:" + e);
             System.exit(0);
@@ -38,7 +38,7 @@ public class WSCTester {
 
         input = JOptionPane.showInputDialog(null, "What is the team you're searching for?");         // Weird fix to make the loop run better
         do {        // Run the search methods
-            JOptionPane.showMessageDialog(null, input + " won " + wsc.teamCount(input) + " times. ");
+            JOptionPane.showMessageDialog(null, input + " won " + championship.teamCount(input) + " times. ");
             input = JOptionPane.showInputDialog(null, "What is the team you're searching for?");
 
         } while (!input.isEmpty());
