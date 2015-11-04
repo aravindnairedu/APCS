@@ -5,7 +5,7 @@ import java.io.IOException;
 
 /**
  *
- * Page 520 (pdf) - 494 book
+ * Page 520 (pdf) - 494 (book)
  *
  * 14. World Series Champions
  If you have downloaded this book's source code (the companion Web site is available at www.pearsonhiglicred.com/gaddis),
@@ -19,24 +19,31 @@ import java.io.IOException;
 public class WSCTester {
 
     public static void main (String args[]) throws IOException {
+        // TODO: More options for things to have champions of. Example that Drugan gave us was for multiple olympics years, the models they won and in what areas they won them.
+
         JOptionPane JO = new JOptionPane();
         WSC wsc = null;
-        String input;
 
-        input = JO.showInputDialog(null, "Welcome, Check to see how many times a team/name has come up in the file. Enter a file's name.\nCurrent Files:\nWorldSeriesWinners.txt - The World Series From 1903 to 2009. Note that the World Series was not played in 1904 or 1994, those years are not included.");
+        //Welcome and get the file name.
+        String input = JOptionPane.showInputDialog(null, "Welcome, Check to see how many times a team/name has come up in the file. " +
+                "Enter a file's name.\nCurrent Files:\nWorldSeriesWinners.txt - The World Series From 1903 to 2009. Note: " +
+                "World Series was not played in 1904 or 1994, those years are excluded.");
 
-        try {
+        try {       // setup the WSC.
             wsc = new WSC(input);
         } catch (IOException e) {
-            JO.showMessageDialog(null, "File not found. \nError Message:" + e);
+            JOptionPane.showMessageDialog(null, "File not found. \nError Message:" + e);
             System.exit(0);
         }
 
-        do {
-            input = JO.showInputDialog(null, "What is the team you're searching for?");
-            JO.showMessageDialog(null, input + " won " + wsc.teamCount(input) + " times. ");
+        input = JOptionPane.showInputDialog(null, "What is the team you're searching for?");         // Weird fix to make the loop run better
+        do {        // Run the search methods
+            JOptionPane.showMessageDialog(null, input + " won " + wsc.teamCount(input) + " times. ");
+            input = JOptionPane.showInputDialog(null, "What is the team you're searching for?");
+
         } while (!input.isEmpty());
 
+        JOptionPane.showMessageDialog(null, "Goodbye! ");
 
 
     }

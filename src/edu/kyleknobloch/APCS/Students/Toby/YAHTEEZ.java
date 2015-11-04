@@ -1,10 +1,9 @@
 package edu.kyleknobloch.APCS.Students.Toby;
-import edu.kyleknobloch.APCS.Students.Toby.Die;
+
 import javax.swing.*;
 public class YAHTEEZ {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		int Score=0;
 		String again;
 		JOptionPane.showMessageDialog(null,"Yo");

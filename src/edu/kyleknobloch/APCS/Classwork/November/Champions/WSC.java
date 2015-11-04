@@ -9,15 +9,18 @@ import java.util.Scanner;
  * World Series Champions
  */
 public class WSC {
+    // TODO: Better menu system and more options for this like JJ said.
+    // TODO: Possibly better naming?
 
     private ArrayList<String> teams = new ArrayList<>();
 
-
     /**
-     * Default Constructor. Takes in the file and then fills the array. That's it.
+     * Default Constructor. Takes in the file path and then fills the array. That's it.
      *
      * @param file the file's name or path
      * @throws IOException
+     *
+     * Will fill the ArrayList with the file's contents.
      */
     public WSC (String file) throws IOException {
         fillArrayList(file);
@@ -26,7 +29,7 @@ public class WSC {
 
 
     /**
-     * Fill the array with the file.
+     * Fill the array with the file's contents.
      *
      * @param filepath the file's bath
      * @throws IOException
@@ -44,13 +47,6 @@ public class WSC {
 
     }
 
-
-    /**
-     * alias for fillArrayList(String filepath)
-     *
-     * @param file the file's path
-     * @throws IOException
-     */
     public void newFile (String file) throws IOException {
         fillArrayList(file);
     }
@@ -74,6 +70,11 @@ public class WSC {
         }
 
         return teamCount;
+    }
+
+    public int search (String team) {
+        return teamCount(team);
+
     }
 
 }
