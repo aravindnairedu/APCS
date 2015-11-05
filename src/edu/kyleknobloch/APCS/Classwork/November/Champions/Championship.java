@@ -9,8 +9,6 @@ import java.util.Scanner;
  * World Series Champions
  */
 public class Championship {
-    // TODO: Better menu system and more options for this like JJ said.
-    // TODO: Possibly better naming?
 
     private ArrayList<String> teams = new ArrayList<>();
 

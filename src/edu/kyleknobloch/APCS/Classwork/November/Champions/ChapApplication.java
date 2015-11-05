@@ -25,13 +25,12 @@ import java.util.StringTokenizer;
 public class ChapApplication {
 
     public static void main (String args[]) throws IOException {
-        // TODO: More options for things to have champions of. Example that Drugan gave us was for multiple olympics years, the models they won and in what areas they won them.
+        // TODO: Make the menu run in a do while loop.
 
         String input;
         String message = "";
         int i = 0;
         int INDEX;
-        ChapApplication CA = new ChapApplication();
         ArrayList<String> sport = new ArrayList<>();
         ArrayList<String> championship = new ArrayList<>();
         ArrayList<String> fileName = new ArrayList<>();
@@ -57,8 +56,8 @@ public class ChapApplication {
         }
 
         // Messages String for the menu
-        for (int index = 0; index < sport.size(); index++){
-            message = message + index + ".) " + sport.get(index) + " - " + championship.get(index) + ".\n";
+        for (i = 0; i < sport.size(); i++){
+            message = message + i + ".) " + sport.get(i) + " - " + championship.get(i) + ".\n";
         }
         message = message + "Please enter the number of your selection.";
 
@@ -75,8 +74,8 @@ public class ChapApplication {
             JOptionPane.showMessageDialog(null, "There was an error finding that file. Sorry about that. Here's the error message:\n" + e);
         }
 
-        // SEARCH
-        do {        // Run the search methods
+        // Preform the forever search!
+        do {
             input = JOptionPane.showInputDialog(null, "What is the team you're searching for?");
             if (input.isEmpty()) break;              // It works, don't worry about it.
             JOptionPane.showMessageDialog(null, input + " won " + champ.search(input) + " times in the " + championship.get(INDEX));
