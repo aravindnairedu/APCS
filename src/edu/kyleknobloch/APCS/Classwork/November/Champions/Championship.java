@@ -39,7 +39,7 @@ public class Championship {
 
         while (filling.hasNext()) {
             teams.add(i, filling.nextLine());
-            //System.out.println(teams.get(i)); //DEBUG
+            //System.out.println(teams.get(i)); // DEBUG
             i++;
         }
 
@@ -60,9 +60,9 @@ public class Championship {
         //System.out.println(teams.size()); //DEBUG
         int teamCount = 0;
 
-        for (String teamsString : teams) { //this is a for each statment
+        for (String teamsString : teams) { // This is a for each statement
             if (teamsString.equalsIgnoreCase(team)) {
-                //System.out.println(teams.get(i)); //DEBUG
+                //System.out.println(teams.get(i)); // DEBUG
                 teamCount++;
             }
         }
