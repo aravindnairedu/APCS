@@ -27,7 +27,6 @@ public class OlympicApplication {
 
     public static void main (String args[]) throws IOException {
         String input;
-        int i = 0;
         int INDEX;
 
         OlympicApplication app = new OlympicApplication();

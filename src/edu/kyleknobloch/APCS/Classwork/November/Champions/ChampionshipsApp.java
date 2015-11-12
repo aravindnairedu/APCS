@@ -14,13 +14,13 @@ import java.util.StringTokenizer;
  * Page 520 (pdf) - 494 (book)
  *
  * 14. World Series Champions
- If you have downloaded this book's source code (the companion Web site is available at www.pearsonhiglicred.com/gaddis),
- you will find a file named WorltiSeriesWinners.txt. This file contains a chronological list of the winning teams in the
- World Scries from 1903 through 2009. (The first line in the file is the name of the team that won in 190 J, and the last
- line is the name of the team that won in 2009. Note that the World Series was not played in 1904 or 1994, so those years
- are skipped in the file.)
- Write a program that lets the user enter the name of a team, and then displays the number of times that team has won
- the World Series in the time period from 1903 through 2009.
+ * If you have downloaded this book's source code (the companion Web site is available at www.pearsonhiglicred.com/gaddis),
+ * you will find a file named WorldSeriesWinners.txt. This file contains a chronological list of the winning teams in the
+ * World Series from 1903 through 2009. (The first line in the file is the name of the team that won in 190 J, and the last
+ * line is the name of the team that won in 2009. Note that the World Series was not played in 1904 or 1994, so those years
+ * are skipped in the file.)
+ * Write a program that lets the user enter the name of a team, and then displays the number of times that team has won
+ * the World Series in the time period from 1903 through 2009.
  */
 public class ChampionshipsApp {
 
@@ -88,6 +88,8 @@ public class ChampionshipsApp {
             i++; // Increment
 
         }
+
+        scanner.close();
     }
 
     private String message() {
