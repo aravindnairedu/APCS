@@ -1,46 +1,47 @@
-Archery Archery.txt
-Athletics Athletics.txt
-Badminton Badminton.txt
-Baseball Baseball.txt
-Basketball Basketball.txt
-Basque_Pelota BasquePelota.txt
-Boxing Boxing.txt
-Canoeing_and_Kayaking CanoeingKayaking.txt
-Cricket Cricket.txt
-Croquet Croquet.txt
-Cycling Cycling.txt
-Diving Diving.txt
-Equestrian Equestrian.txt
-Fencing Fencing.txt
-Football_(Soccer) Soccer.txt
-Golf Golf.txt
-Gymnastics Gymnastics.txt
-Handball Handball.txt
-Hockey_(field) FieldHockey.txt
-Jeu_de_paume JeuDePaume.txt
-Judo Judo.txt
-Lacrosse Lacrosse.txt
-Modern_Pentathlon ModernPentathlon.txt
-Polo Polo.txt
-Rackets Rackets.txt
-Rhythmic_Gymnastics RythmicGymnastics.txt
-Roque Roque.txt
-Rowing Rowing.txt
-Rugby_union Rugby1.txt
-Rugby_sevens Ruby2.txt
-Sailing Sailing.txt
-Shooting Shooting.txt
-Softball Softball.txt
-Swimming Swimming.txt
-Synchronized_Swimming SyncSwimming.txt
-Table_Tennis TableTennis.txt
-Taekwondo Taekwondo.txt
-Tennis Tennis.txt
-Trampoline Tramp.txt
-Triathlon Triathlon.txt
-Tug_of_War TugOfWar.txt
-Volleyball Volleyball.txt
-Water_Motor_Sports WaterMotorSports.txt
-Water_Polo WaterPolo.txt
-Weightlifting Weightlifting.txt
-Wrestling Wrestling.txt
+Archery gold Archery.txt
+Athletics gold Athletics.txt
+Badminton gold Badminton.txt
+Baseball gold Baseball.txt
+Basketball gold Basketball.txt
+Basque_Pelota gold BasquePelota.txt
+Boxing gold Boxing.txt
+Canoeing_and_Kayaking gold CanoeingKayaking.txt
+Cricket gold Cricket.txt
+Croquet gold Croquet.txt
+Cycling gold Cycling.txt
+Diving gold Diving.txt
+Equestrian gold Equestrian.txt
+Fencing gold Fencing.txt
+Football_(Soccer) gold Soccer.txt
+Golf gold Golf.txt
+Gymnastics gold Gymnastics.txt
+Handball gold Handball.txt
+Handball silver SilverHandball.txt
+Hockey_(field) gold FieldHockey.txt
+Jeu_de_paume gold JeuDePaume.txt
+Judo gold Judo.txt
+Lacrosse gold Lacrosse.txt
+Modern_Pentathlon gold ModernPentathlon.txt
+Polo gold Polo.txt
+Rackets gold Rackets.txt
+Rhythmic_Gymnastics gold RythmicGymnastics.txt
+Roque gold Roque.txt
+Rowing gold Rowing.txt
+Rugby_union gold Rugby1.txt
+Rugby_sevens gold Ruby2.txt
+Sailing gold Sailing.txt
+Shooting gold Shooting.txt
+Softball gold Softball.txt
+Swimming gold Swimming.txt
+Synchronized_Swimming gold SyncSwimming.txt
+Table_Tennis gold TableTennis.txt
+Taekwondo gold Taekwondo.txt
+Tennis gold Tennis.txt
+Trampoline gold Tramp.txt
+Triathlon gold Triathlon.txt
+Tug_of_War gold TugOfWar.txt
+Volleyball gold Volleyball.txt
+Water_Motor_Sports gold WaterMotorSports.txt
+Water_Polo gold WaterPolo.txt
+Weightlifting gold Weightlifting.txt
+Wrestling gold Wrestling.txt

@@ -24,68 +24,82 @@ import java.util.StringTokenizer;
  */
 public class ChampionshipsApp {
 
+
+    private ArrayList<String> sport = new ArrayList<>();
+    private ArrayList<String> championship = new ArrayList<>();
+    private ArrayList<String> fileName = new ArrayList<>();
+
     public static void main (String args[]) throws IOException {
         // TODO: Make the menu run in a do while loop.
 
         String input;
-        String message = "";
-        int i = 0;
         int INDEX;
-        ArrayList<String> sport = new ArrayList<>();
-        ArrayList<String> championship = new ArrayList<>();
-        ArrayList<String> fileName = new ArrayList<>();
-
-        File file = new File("MasterList.txt");
-        Scanner scanner = new Scanner(file);
+        ChampionshipsApp app = new ChampionshipsApp();
 
 
-        // Fill up the array
-        while (scanner.hasNext()) {
-            sport.add(i, scanner.next()); // Sport name
+        app.fillArray();
 
-            // Championship
-            StringTokenizer ST = new StringTokenizer(scanner.next(), "_");
-            String champ="";
-            while (ST.hasMoreElements()) {
-                champ = champ + " " + ST.nextElement();
-            }
-            championship.add(i, champ);
-
-            fileName.add(i, scanner.next()); // File name
-            i++; // Increment
-        }
-
-        // Messages String for the menu
-        for (i = 0; i < sport.size(); i++){
-            message = message + i + ".) " + sport.get(i) + " - " + championship.get(i) + ".\n";
-        }
-        message = message + "Please enter the number of your selection.";
-
-
-        input = JOptionPane.showInputDialog(null, message); // Display the menu
-        INDEX = Integer.parseInt(input); //Your option is now an int! Congratulations.
+        input = JOptionPane.showInputDialog(null, app.message()); // Display the menu
+        INDEX = Integer.parseInt(input); // Your option is now an int! Congratulations.
 
 
         // Now we get the file setup
         Championship champ = null;
         try {
-            champ = new Championship(fileName.get(INDEX));
+            champ = new Championship(app.fileName.get(INDEX));
         } catch (FileNotFoundException e) {
             JOptionPane.showMessageDialog(null, "There was an error finding that file. Sorry about that. Here's the error message:\n" + e);
         }
+
 
         // Preform the forever search!
         do {
             input = JOptionPane.showInputDialog(null, "What is the team you're searching for?");
             if (input.isEmpty()) break;              // It works, don't worry about it.
-            JOptionPane.showMessageDialog(null, input + " won " + champ.search(input) + " times in the " + championship.get(INDEX));
+            JOptionPane.showMessageDialog(null, input + " won " + champ.search(input) + " times in the " + app.championship.get(INDEX));
 
         } while (!input.isEmpty());
+
 
         // Finish
         JOptionPane.showMessageDialog(null, "Goodbye! ");
 
 
+    }
+
+
+    private void fillArray() throws FileNotFoundException {
+        File masterFile = new File("MasterList.txt");
+        Scanner scanner = new Scanner(masterFile);
+        int i = 0;
+
+        while (scanner.hasNext()) {
+            sport.add(i, scanner.next()); // Sport name
+
+            // Championship
+            StringTokenizer ST = new StringTokenizer(scanner.next(), "_");
+            String champ = "";
+            while (ST.hasMoreElements())
+                champ = champ + " " + ST.nextElement();
+
+            championship.add(i, champ);
+
+            fileName.add(i, scanner.next()); // File name
+            i++; // Increment
+
+        }
+    }
+
+    private String message() {
+        String message = "";
+
+        // Messages String for the menu
+        for (int i = 0; i < sport.size(); i++){
+            message = message + i + ".) " + sport.get(i) + " - " + championship.get(i) + ".\n";
+        }
+        message = message + "Please enter the number of your selection.";
+
+        return message;
     }
 
 

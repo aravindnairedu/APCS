@@ -13,27 +13,63 @@ import java.util.StringTokenizer;
  *
  * Page 520 (pdf) - 494 (book)
  *
- * 14. World Series Champions
- If you have downloaded this book's source code (the companion Web site is available at www.pearsonhiglicred.com/gaddis),
- you will find a file named WorltiSeriesWinners.txt. This file contains a chronological list of the winning teams in the
- World Scries from 1903 through 2009. (The first line in the file is the name of the team that won in 190 J, and the last
- line is the name of the team that won in 2009. Note that the World Series was not played in 1904 or 1994, so those years
- are skipped in the file.)
- Write a program that lets the user enter the name of a team, and then displays the number of times that team has won
- the World Series in the time period from 1903 through 2009.
+ * Olympic Gold Medals
+ *
+ * Show all the sport, in that sport's text file it should have what country has won gold.
+ *
+ * STORY: I have a user who wants to know how many times the USA has won in Field Hockey (18).
  */
 public class OlympicApplication {
 
+    private ArrayList<String> sport = new ArrayList<>();
+    private ArrayList<String> medal = new ArrayList<>();
+    private ArrayList<String> fileName = new ArrayList<>();
+
     public static void main (String args[]) throws IOException {
         String input;
-        String message = "Olympic Sports and number of golds below: \n";
         int i = 0;
         int INDEX;
-        ArrayList<String> sport = new ArrayList<>();
-        ArrayList<String> fileName = new ArrayList<>();
 
+        OlympicApplication app = new OlympicApplication();
+        Scanner console = new Scanner(System.in);
+
+        app.fillArray(); //fill the array
+
+
+        System.out.println(app.message()); // Display the menu
+        INDEX = console.nextInt(); // Your option is now an int! Congratulations.
+
+
+        // Now we get the file setup
+        Championship champ = null;
+        try {
+            champ = new Championship(app.fileName.get(INDEX));
+        } catch (FileNotFoundException e) {
+            JOptionPane.showMessageDialog(null, "There was an error finding that sport's file. Sorry about that. Here's the error message:\n" + e);
+            System.exit(0);
+        }
+
+
+        // Preform the forever search!
+        do {
+            input = JOptionPane.showInputDialog(null, "What is the team you're searching for?");
+            if (input.isEmpty()) break;              // It works, don't worry about it.
+            JOptionPane.showMessageDialog(null, input + " has received " + app.medal.get(INDEX) + " " + champ.search(input) + " times in" + app.sport.get(INDEX));
+
+        } while (!input.isEmpty());
+
+
+        // Finish
+        JOptionPane.showMessageDialog(null, "Goodbye! ");
+
+
+    }
+
+
+    private void fillArray() throws FileNotFoundException {
         File masterFile = new File("OlympicMasterList.txt");
         Scanner scanner = new Scanner(masterFile);
+        int i = 0;
 
 
         // Fill up the array
@@ -45,45 +81,27 @@ public class OlympicApplication {
             while (ST.hasMoreElements())
                 S_sport = S_sport + " " + ST.nextElement();
 
-
             sport.add(i, S_sport);
 
+
+            medal.add(i, scanner.next()); //gold/silver/bronze
             fileName.add(i, scanner.next()); // File name
             i++; // Increment
         }
 
+        scanner.close();
+    }
+
+    private String message() {
+        String message = "Olympic Sports and number of golds below: \n";
+
         // Messages String for the menu
-        for (i = 0; i < sport.size(); i++){
-            message = message + i + ".) " + sport.get(i) + ".\n";
+        for (int i = 0; i < sport.size(); i++){
+            message = message + i + ".)" + sport.get(i) + " - " + medal.get(i) +"\n";
         }
         message = message + "Please enter the number of your selection.";
 
-
-        input = JOptionPane.showInputDialog(null, message); // Display the menu
-        INDEX = Integer.parseInt(input); // Your option is now an int! Congratulations.
-
-
-        // Now we get the file setup
-        Championship champ = null;
-        try {
-            champ = new Championship(fileName.get(INDEX));
-        } catch (FileNotFoundException e) {
-            JOptionPane.showMessageDialog(null, "There was an error finding that file. Sorry about that. Here's the error message:\n" + e);
-            System.exit(0);
-        }
-
-        // Preform the forever search!
-        do {
-            input = JOptionPane.showInputDialog(null, "What is the team you're searching for?");
-            if (input.isEmpty()) break;              // It works, don't worry about it.
-            JOptionPane.showMessageDialog(null, input + " won " + champ.search(input) + " times in the " + sport.get(INDEX));
-
-        } while (!input.isEmpty());
-
-        // Finish
-        JOptionPane.showMessageDialog(null, "Goodbye! ");
-
-
+        return message;
     }
 
 
