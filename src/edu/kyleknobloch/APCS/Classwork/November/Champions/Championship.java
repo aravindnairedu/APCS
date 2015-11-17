@@ -53,15 +53,15 @@ public class Championship {
     /**
      * Check to see how many times a team has won.
      *
-     * @param team the team's name
+     * @param query the team's name
      * @return how many times that team appeared in the file.
      */
-    public int teamCount (String team) {
+    public int teamCount (String query) {
         //System.out.println(teams.size()); //DEBUG
         int teamCount = 0;
 
         for (String teamsString : teams) { // This is a for each statement
-            if (teamsString.equalsIgnoreCase(team)) {
+            if (teamsString.contains(query)) {
                 //System.out.println(teams.get(i)); // DEBUG
                 teamCount++;
             }
