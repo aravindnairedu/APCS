@@ -15,8 +15,8 @@ public class Student {
 
     private String firstName;
     private String lastName;
-    private String middleInitiel;
-    private String addres;
+    private String middleInitial;
+    private String address;
     private String phoneNumber;
     private String contactNumbers;
     private int studentID;
@@ -27,8 +27,8 @@ public class Student {
 
         this.firstName = firstName;
         this.lastName = lastName;
-        this.middleInitiel = middleInitiel;
-        this.addres = addres;
+        this.middleInitial = middleInitiel;
+        this.address = addres;
         this.phoneNumber = phoneNumber;
         this.contactNumbers = contactNumbers;
 
@@ -41,8 +41,8 @@ public class Student {
     @Override
     public String toString () {
         return "Student information: " +
-                "\nFull Name: " + getFirstName() + " " + getMiddleInitiel() + " " + getLastName() +
-                "\nAddress: " + getAddres() +
+                "\nFull Name: " + getFirstName() + " " + getMiddleInitial() + " " + getLastName() +
+                "\nAddress: " + getAddress() +
                 "\nPhone Number: " + getPhoneNumber() +
                 "\nContact Numbers: " + getContactNumbers() +
                 "\nID: " + getStudentID() +
@@ -61,8 +61,8 @@ public class Student {
         return YoG;
     }
 
-    public String getAddres() {
-        return addres;
+    public String getAddress() {
+        return address;
     }
 
     public String getContactNumbers() {
@@ -77,8 +77,8 @@ public class Student {
         return lastName;
     }
 
-    public String getMiddleInitiel() {
-        return middleInitiel;
+    public String getMiddleInitial() {
+        return middleInitial;
     }
 
     public String getPhoneNumber() {

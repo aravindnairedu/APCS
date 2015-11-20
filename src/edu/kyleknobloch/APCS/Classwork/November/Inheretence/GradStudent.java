@@ -9,19 +9,21 @@ package edu.kyleknobloch.APCS.Classwork.November.Inheretence;
 public class GradStudent extends Student {
 
     private String major;
-    private String minors;
+    private String minor;
+    private String thesis;
 
 
     public GradStudent (String firstName, String lastName, String middleInitiel, String addres, String phoneNumber, String contactNumbers) {
         super(firstName, lastName, middleInitiel, addres, phoneNumber, contactNumbers);
-        this.major = "undefined";
-        this.minors = "undefined";
+        setMajor("undefined");
+        setMinor("undefined");
+        setThesis("undefined");
     }
 
 
     @Override
     public String toString() {
-        return super.toString() + "Major: " + getMajor() + "\nMinors: " + getMinors() + "\n";
+        return super.toString() + "Major(s): " + getMajor() + "\nMinor(s): " + getMinor() + "\nThesis: " + getThesis() + "\n";
     }
 
     /**
@@ -31,8 +33,12 @@ public class GradStudent extends Student {
         return major;
     }
 
-    public String getMinors() {
-        return minors;
+    public String getMinor() {
+        return minor;
+    }
+
+    public String getThesis() {
+        return thesis;
     }
 
     /**
@@ -43,8 +49,11 @@ public class GradStudent extends Student {
         this.major = major;
     }
 
-    public void setMinors(String minors) {
-        this.minors = minors;
+    public void setMinor(String minor) {
+        this.minor = minor;
     }
 
+    public void setThesis(String thesis) {
+        this.thesis = thesis;
+    }
 }
