@@ -1,10 +1,7 @@
 package edu.kyleknobloch.APCS.Classwork.November.Inheretence;
 
 /**
- * Created by kyleknobloch on 11/16/15,
- * For
- * *
- * Actions:
+ * Tester class for Student, GradStudent, NonMatriculatingStudent and UnderGradStudent
  */
 public class StudentTester {
 
@@ -31,7 +28,6 @@ public class StudentTester {
         nonMatriculatingStudentStudent.setClasses("Computer Science A435, Into to Java F533, Into to C++ and Python D532");
 
         System.out.println(nonMatriculatingStudentStudent.toString());
-
 
 
     }

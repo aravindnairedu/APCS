@@ -3,10 +3,7 @@ package edu.kyleknobloch.APCS.Classwork.November.Inheretence;
 import java.util.Random;
 
 /**
- * Created by kyleknobloch on 11/16/15,
- * For
- * *
- * Actions:
+ * Student Class
  */
 public class Student {
 
@@ -38,6 +35,10 @@ public class Student {
     }
 
 
+    /**
+     * toString displays all the information that we have for the student.
+     * @return toString message
+     */
     @Override
     public String toString () {
         return "Student information: " +
@@ -52,7 +53,6 @@ public class Student {
     /**
      * get methods
      */
-
     public int getStudentID() {
         return studentID;
     }
@@ -85,10 +85,12 @@ public class Student {
         return phoneNumber;
     }
 
+
     /**
      * set methods
+     *
+     * These methods can me changed if needed.
      */
-
     public void setYoG(int yoG) {
         YoG = yoG;
     }
@@ -98,4 +100,5 @@ public class Student {
 
         return r.nextInt(999999999) + 1;
     }
+
 }

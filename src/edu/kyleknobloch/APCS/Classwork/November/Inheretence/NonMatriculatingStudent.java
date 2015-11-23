@@ -1,10 +1,7 @@
 package edu.kyleknobloch.APCS.Classwork.November.Inheretence;
 
 /**
- * Created by kyleknobloch on 11/16/15,
- * For
- * *
- * Actions:
+ * NonMatriculating extending Student
  */
 public class NonMatriculatingStudent extends Student {
 
@@ -15,13 +12,22 @@ public class NonMatriculatingStudent extends Student {
         super(firstName, lastName, middleInitiel, addres, phoneNumber, contactNumbers);
 
         setClasses("undefined");
+        super.setYoG(-1);
     }
 
 
+    /**
+     * @override
+     *
+     * toString displays all the information that we have for the student. It extends the Super.toString class to
+     * include that information along with the information in this class.
+     * @return toString message
+     */
     @Override
     public String toString() {
         return super.toString() + "Classes: " + getClasses() + "\n";
     }
+
 
     /**
      * get methods
@@ -30,15 +36,6 @@ public class NonMatriculatingStudent extends Student {
         return classes;
     }
 
-    /**
-     * The Year of Graduation for a non matriculating student is undetermined as they're only taking classes and don't
-     * plan on "graduating."
-     * @return -1 as they don't have an official Year of Graduation
-     */
-    @Override
-    public int getYoG() {
-        return -1;
-    }
 
     /**
      * set methods
@@ -46,4 +43,5 @@ public class NonMatriculatingStudent extends Student {
     public void setClasses(String classes) {
         this.classes = classes;
     }
+
 }

@@ -1,10 +1,7 @@
 package edu.kyleknobloch.APCS.Classwork.November.Inheretence;
 
 /**
- * Created by kyleknobloch on 11/16/15,
- * For
- * *
- * Actions:
+ * Grad extending Student
  */
 public class GradStudent extends Student {
 
@@ -21,6 +18,13 @@ public class GradStudent extends Student {
     }
 
 
+    /**
+     * @override
+     *
+     * toString displays all the information that we have for the student. It extends the Super.toString class to
+     * include that information along with the information in this class.
+     * @return toString message
+     */
     @Override
     public String toString() {
         return super.toString() + "Major(s): " + getMajor() + "\nMinor(s): " + getMinor() + "\nThesis: " + getThesis() + "\n";
@@ -44,7 +48,6 @@ public class GradStudent extends Student {
     /**
      * set methods
      */
-
     public void setMajor(String major) {
         this.major = major;
     }
