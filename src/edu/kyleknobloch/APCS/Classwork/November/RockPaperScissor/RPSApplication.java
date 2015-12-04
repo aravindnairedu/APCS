@@ -61,11 +61,11 @@ public class RPSApplication {
             else if (check.equalsIgnoreCase("tie")) {
                 JOptionPane.showMessageDialog(null, "You both threw " + computer.getHand() + "! It's a tie. No points given."  + "\nThe score is still\n" + computer.getName() + ": " + computer.getScore() + "\n" + player1.getName() + ": " + player1.getScore());
             } else if (check.equalsIgnoreCase("computer")) {
-                JOptionPane.showMessageDialog(null, "You chose " + player1.getHand() + " and the comptuer chose " + computer.getHand() + ".\n" + "The computer won! Better luck next time! " + "\nThe score is now\n" + computer.getName() + ": " + computer.getScore() + "\n" + player1.getName() + ": " + player1.getScore());
                 computer.plusOneScore();
+                JOptionPane.showMessageDialog(null, "You chose " + player1.getHand() + " and the comptuer chose " + computer.getHand() + ".\n" + "The computer won! Better luck next time! " + "\nThe score is now\n" + computer.getName() + ": " + computer.getScore() + "\n" + player1.getName() + ": " + player1.getScore());
             } else if (check.equalsIgnoreCase("player")){
-                JOptionPane.showMessageDialog(null, "You chose " + player1.getHand() + " and the comptuer chose " + computer.getHand() + ".\n" + "YOU WIN! You get a point!" + "\nThe score is now\n" + computer.getName() + ": " + computer.getScore() + "\n" + player1.getName() + ": " + player1.getScore());
                 player1.plusOneScore();
+                JOptionPane.showMessageDialog(null, "You chose " + player1.getHand() + " and the comptuer chose " + computer.getHand() + ".\n" + "YOU WIN! You get a point!" + "\nThe score is now\n" + computer.getName() + ": " + computer.getScore() + "\n" + player1.getName() + ": " + player1.getScore());
             } else {
                JOptionPane.showMessageDialog(null, "Sorry, something went wrong!!!!! Quick put out the flames! ");
             }

@@ -11,8 +11,6 @@ public class Employee {
     private String hireDate;
 
 
-
-
     public Employee (String name, String ID, String hireDate) {
         this.hireDate = hireDate;
         this.ID = ID;
@@ -21,10 +19,15 @@ public class Employee {
     }
 
 
+    /**
+     * Display the Employee's Information
+     * @return toString
+     */
     @Override
     public String toString() {
         return "Employee Data:\nName: "+ getName() + "\nID: " + getID() + "\nHire Date: " + getHireDate() + "\n";
     }
+
 
     /**
      * get methods

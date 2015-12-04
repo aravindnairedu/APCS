@@ -49,7 +49,7 @@ public class RPS {
         int n = JOptionPane.showOptionDialog(null, "Please choose your throw:", "RPS!!!!",
                 JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE, null, options, options[2]);
 
-        System.out.println(n); //DEBUG
+        //System.out.println(n); //DEBUG
 
         switch (n) {
             case 0:

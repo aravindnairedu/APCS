@@ -1,10 +1,7 @@
 package edu.kyleknobloch.APCS.Homework.December;
 
 /**
- * Created by kyleknobloch on 12/3/15,
- * For
- * *
- * Actions:
+ * Chapter 10 Ex 3. TeamLeader
  */
 public class TeamLeader extends ProductionWorker {
 
@@ -13,11 +10,30 @@ public class TeamLeader extends ProductionWorker {
     private int trainingHours;
 
 
+    /**
+     * constucor that satasfies ProductionWorker and Employee
+     * @param name
+     * @param ID
+     * @param hireDate
+     * @param shift
+     * @param payRate
+     */
     public TeamLeader (String name, String ID, String hireDate, int shift, double payRate) {
         super(name, ID, hireDate, shift, payRate);
 
     }
 
+    /**
+     * Contructor that takes evreything
+     * @param name
+     * @param ID
+     * @param hireDate
+     * @param shift
+     * @param payRate
+     * @param monthyBonus
+     * @param minTrainingHours
+     * @param trainingHours
+     */
     public TeamLeader (String name, String ID, String hireDate, int shift, double payRate, double monthyBonus, int minTrainingHours, int trainingHours) {
         super(name, ID, hireDate, shift, payRate);
         this.monthyBonus = monthyBonus;
@@ -27,6 +43,10 @@ public class TeamLeader extends ProductionWorker {
     }
 
 
+    /**
+     * Display the Employee's Information
+     * @return toString
+     */
     @Override
     public String toString() {
         return super.toString() + "Monthly Production Bonus: $" + getMonthyBonus() + "\nMin Training Hours Required: " + getMinTrainingHours() + "hr\nHours Trained: " + getTrainingHours() + "hr\n";
@@ -77,6 +97,7 @@ public class TeamLeader extends ProductionWorker {
     public int getTrainingHours() {
         return trainingHours;
     }
+
 
     /**
      * set methods

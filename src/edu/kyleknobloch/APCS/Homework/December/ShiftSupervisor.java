@@ -40,6 +40,10 @@ public class ShiftSupervisor extends Employee {
     }
 
 
+    /**
+     * Display the Employee's Information
+     * @return toString
+     */
     @Override
     public String toString() {
         return super.toString() + "Annual Salary: $" + getAnnualSalary() + "\nAnnual Production Bonus: $" + getAnnualProductionBouns() + "\n";
@@ -49,7 +53,6 @@ public class ShiftSupervisor extends Employee {
     /**
      * get methods
      */
-
     @Override
     public String getName() {
         return super.getName();
@@ -72,6 +75,7 @@ public class ShiftSupervisor extends Employee {
     public double getAnnualProductionBouns() {
         return annualProductionBouns;
     }
+
 
     /**
      * set methods

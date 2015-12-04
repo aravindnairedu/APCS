@@ -36,10 +36,15 @@ public class ProductionWorker extends Employee {
     }
 
 
+    /**
+     * Display the Employee's Information
+     * @return toString
+     */
     @Override
     public String toString() {
         return super.toString() + "Shift: " + getShiftName() + "\nPay Rate: $" + getPayRate() + "\n";
     }
+
 
     /**
      * get methods
