@@ -11,7 +11,6 @@ import java.util.StringTokenizer;
  */
 public class ReportTester {
 
-
     private static String file;
 
     private static ArrayList<String> type = new ArrayList<>();
@@ -24,16 +23,17 @@ public class ReportTester {
     private static ArrayList<Mammal> mammals = new ArrayList<>();
     private static ArrayList<Reptile> reptiles = new ArrayList<>();
 
+
     public static void main (String args[]) {
         file = "Animals.txt";
 
         fillArrays();
         fillObjectArrays();
 
-
         Report report = new Report(mammals, reptiles);
 
         System.out.println(report.getReport());
+
     }
 
 
@@ -51,15 +51,15 @@ public class ReportTester {
 
         while (scanner.hasNext()) {
 
-            String typ = "";
-            String nam = "";
-            String cat = "";
+            String typ;
+            String nam;
+            String cat;
             String spe = "";
             String env = "";
             String fod = "";
 
             typ = scanner.next();
-            System.out.println(typ); //DEBUG
+            //System.out.println(typ); //DEBUG
             type.add(index, typ);
 
             nam = scanner.next();
@@ -98,7 +98,7 @@ public class ReportTester {
         while (index < type.size()) {
 
             if (type.get(index).equalsIgnoreCase("Mammal")){
-                System.out.println(index); //DEBUG
+                //System.out.println(index); //DEBUG
                 mammals.add(mINDEX, new Mammal(name.get(index), catagory.get(index), species.get(index), envierment.get(index), foodSource.get(index)));
                 index++;
                 mINDEX++;
@@ -106,17 +106,16 @@ public class ReportTester {
             else if (type.get(index).equalsIgnoreCase("Reptile")) {
 
                 reptiles.add(rINDEX, new Reptile(name.get(index), catagory.get(index), species.get(index), envierment.get(index), foodSource.get(index)));
-                System.out.println(index);
+                //System.out.println(index); //DEBUG
                 index++;
                 rINDEX++;
             }
             else {
-                System.out.println("something went wrong with index" + index);
+                System.out.println("Something went wrong with index" + index);
                 index++;
             }
 
         }
-
 
     }
 
