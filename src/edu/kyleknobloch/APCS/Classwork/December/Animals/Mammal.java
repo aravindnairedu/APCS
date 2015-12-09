@@ -84,7 +84,6 @@ public class Mammal extends Animal {
         return hair;
     }
 
-
     /**
      * set methods
      */

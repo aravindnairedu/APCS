@@ -34,8 +34,5 @@ public class AnimalTester
       System.out.println(pug.toString());
 
 
-
-
-      Report report = new Report("Animals.txt");
    }
 } //end main
