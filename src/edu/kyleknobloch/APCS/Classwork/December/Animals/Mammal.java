@@ -14,6 +14,7 @@ public class Mammal extends Animal {
     private String foodSource;
     private String climate;
 
+
     public Mammal (String name, String species, String catagory) {
         super(name, species, catagory);
         aquatic = false;
@@ -21,6 +22,16 @@ public class Mammal extends Animal {
         hair = false;
         foodSource = "yummy food (default)";
         climate = "somewhere nice (default)";
+
+    }
+
+    public Mammal (String name, String species, String catagory, String climate, String foodSource) {
+        super(name, species, catagory);
+        this.foodSource =foodSource;
+        this.climate = climate;
+        aquatic = false;
+        fur = false;
+        hair = false;
 
     }
 

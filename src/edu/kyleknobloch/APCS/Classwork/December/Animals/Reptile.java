@@ -26,6 +26,16 @@ public class Reptile extends Animal {
 
     }
 
+    public Reptile (String name, String species, String catagory, String climate, String foodSource) {
+        super(name, species, catagory);
+        this.foodSource =foodSource;
+        this.climate = climate;
+        aquatic = false;
+        scales = false;
+        numberOfScales = 0;
+
+    }
+
 
     /**
      * toString

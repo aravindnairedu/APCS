@@ -1,0 +1,5 @@
+Reptile Crocodile Crocodilian Saltwater_Crocodile Aquatic_or_semi-aquatic_environments_in_any_tropical_place Buffalo,_Zebra,_Fish,_Sharks,_Birds,_Humans,_Snakes
+Reptile Anaconda Snake Green_Anaconda Rainforest,_Swamps,_Rivers,_Slow-moving_Streams Caimans,_Birds,_Monkeys,_Capybaras,_Humans
+Mammal Big_Cat Cats Cougar Mountainous regions Deer,_Moose,_Mice
+Mammal Domestic_Doge Doge Pug Andruseph’s_House COOKIEZ
+???? ???? MYTHICAL_MONSTER SHARKODILE EVERY_WATER_SOURCE_ON_THE_PLANET ONLY_HUMANS

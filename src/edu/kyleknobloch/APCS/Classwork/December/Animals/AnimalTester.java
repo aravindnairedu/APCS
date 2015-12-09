@@ -31,6 +31,11 @@ public class AnimalTester
       pug.setClimate("Andruseph's house");
       pug.setFoodSource("COOKIEZ");
 
-      System.out.println(pug.toString());   
+      System.out.println(pug.toString());
+
+
+
+
+      Report report = new Report("Animals.txt");
    }
 } //end main
