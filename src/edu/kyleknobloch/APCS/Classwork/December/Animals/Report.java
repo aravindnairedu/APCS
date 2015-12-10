@@ -21,14 +21,14 @@ public class Report {
 
     public String getReport () {
 
-        String report = "0.) Type | Name, Category | Species | Envierment | Food Source\n";
+        String report = "0.) Type    | Name, Category | Species | Envierment | Food Source\n";
         int mainINDEX = 1;
 
         //$number.) $type, $name, $catagory, $species, $envierment, $FoodSource
 
         for (int i = 0; i < mammals.size(); i++) {
 
-            report = report + mainINDEX + ".) Mammal | " +  mammals.get(i).getName() + ", " + mammals.get(i).getCatagory() + " | " +
+            report = report + mainINDEX + ".) Mammal  | " +  mammals.get(i).getName() + ", " + mammals.get(i).getCatagory() + " | " +
             mammals.get(i).getSpecies() + " | " + mammals.get(i).getClimate() + " | " + mammals.get(i).getFoodSource() +"\n";
 
             mainINDEX++;
@@ -37,7 +37,7 @@ public class Report {
 
         for (int i = 0; i < reptiles.size(); i++) {
 
-            report = report + mainINDEX + ".) Reptial    | " +  reptiles.get(i).getName() + ", " + reptiles.get(i).getCatagory() + " | " +
+            report = report + mainINDEX + ".) Reptial | " +  reptiles.get(i).getName() + ", " + reptiles.get(i).getCatagory() + " | " +
                     reptiles.get(i).getSpecies() + " | " + reptiles.get(i).getClimate() + " | " + reptiles.get(i).getFoodSource() + "\n";
 
             mainINDEX++;

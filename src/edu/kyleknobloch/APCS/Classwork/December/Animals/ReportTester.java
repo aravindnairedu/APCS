@@ -13,13 +13,6 @@ public class ReportTester {
 
     private static String file;
 
-    private static ArrayList<String> type = new ArrayList<>();
-    private static ArrayList<String> name = new ArrayList<>();
-    private static ArrayList<String> catagory = new ArrayList<>();
-    private static ArrayList<String> species = new ArrayList<>();
-    private static ArrayList<String> envierment = new ArrayList<>();
-    private static ArrayList<String> foodSource = new ArrayList<>();
-
     private static ArrayList<Mammal> mammals = new ArrayList<>();
     private static ArrayList<Reptile> reptiles = new ArrayList<>();
 
@@ -28,7 +21,7 @@ public class ReportTester {
         file = "Animals.txt";
 
         fillArrays();
-        fillObjectArrays();
+        //fillObjectArrays();
 
         Report report = new Report(mammals, reptiles);
 
@@ -59,29 +52,35 @@ public class ReportTester {
             String fod = "";
 
             typ = scanner.next();
-            //System.out.println(typ); //DEBUG
-            type.add(index, typ);
+            System.out.println(typ); //DEBUG
 
             nam = scanner.next();
-            name.add(index, nam);
 
             cat = scanner.next();
-            catagory.add(index, cat);
 
             StringTokenizer ST3 = new StringTokenizer(scanner.next(), "_");
             while (ST3.hasMoreElements())
                 spe = spe + " " + ST3.nextElement();
-            species.add(index, spe);
 
             StringTokenizer ST4 = new StringTokenizer(scanner.next(), "_");
             while (ST4.hasMoreElements())
                 env = env + " " + ST4.nextElement();
-            envierment.add(index, env);
 
             StringTokenizer ST6 = new StringTokenizer(scanner.next(), "_");
             while (ST6.hasMoreElements())
                 fod = fod + " " + ST6.nextElement();
-            foodSource.add(index, fod);
+
+
+            //fill object arrays
+            if (typ.equalsIgnoreCase("mammal")) {
+                mammals.add(new Mammal(nam, spe, cat, env, fod));
+                System.out.println("mammal add");
+            }
+             else if (typ.equalsIgnoreCase("reptile")) {
+                reptiles.add(new Reptile(nam, spe, cat, env, fod));
+                System.out.println("reptile add");
+
+            }
 
             index++;
 
@@ -89,34 +88,6 @@ public class ReportTester {
 
     }
 
-    public static void fillObjectArrays () {
 
-        int index = 0;
-        int mINDEX = 0;
-        int rINDEX = 0;
-
-        while (index < type.size()) {
-
-            if (type.get(index).equalsIgnoreCase("Mammal")){
-                //System.out.println(index); //DEBUG
-                mammals.add(mINDEX, new Mammal(name.get(index), catagory.get(index), species.get(index), envierment.get(index), foodSource.get(index)));
-                index++;
-                mINDEX++;
-            }
-            else if (type.get(index).equalsIgnoreCase("Reptile")) {
-
-                reptiles.add(rINDEX, new Reptile(name.get(index), catagory.get(index), species.get(index), envierment.get(index), foodSource.get(index)));
-                //System.out.println(index); //DEBUG
-                index++;
-                rINDEX++;
-            }
-            else {
-                System.out.println("Something went wrong with index" + index);
-                index++;
-            }
-
-        }
-
-    }
 
 }

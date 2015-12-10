@@ -153,7 +153,7 @@ public class Chap7Ex5 {
      * Basicly an advanced toString method
      */
     public String getQuestionsMissed () {
-        String message = "Questions Missed.) Correct Answer \n";
+        String message = "Questions Missed: \n";
 
         for (int i = 0; i < questionsMissed.size(); i++){
             message = message + questionsMissed.get(i) + ".) " + correctAnswers.get(questionsMissed.get(i)) + " \n";
