@@ -12,6 +12,11 @@ public class Report {
     private ArrayList<Reptile> reptiles = new ArrayList<>();
 
 
+    /**
+     * default constructro
+     * @param Mammal mammal ArrayList<Mammal>
+     * @param Reptiles reptile ArrayList<Reptile>
+     */
     public Report (ArrayList<Mammal> Mammal, ArrayList<Reptile> Reptiles) {
         mammals = Mammal;
         reptiles = Reptiles;
@@ -19,6 +24,10 @@ public class Report {
     }
 
 
+    /**
+     * Generate the report
+     * @return Report String
+     */
     public String getReport () {
 
         String report = "0.) Type    | Name, Category | Species | Envierment | Food Source\n";
@@ -26,6 +35,7 @@ public class Report {
 
         //$number.) $type, $name, $catagory, $species, $envierment, $FoodSource
 
+        //mammals
         for (int i = 0; i < mammals.size(); i++) {
 
             report = report + mainINDEX + ".) Mammal  | " +  mammals.get(i).getName() + ", " + mammals.get(i).getCatagory() + " | " +
@@ -35,6 +45,7 @@ public class Report {
 
         }
 
+        //reptiles
         for (int i = 0; i < reptiles.size(); i++) {
 
             report = report + mainINDEX + ".) Reptial | " +  reptiles.get(i).getName() + ", " + reptiles.get(i).getCatagory() + " | " +

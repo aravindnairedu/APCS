@@ -20,16 +20,21 @@ public class ReportTester {
     public static void main (String args[]) {
         file = "Animals.txt";
 
+
         fillArrays();
-        //fillObjectArrays();
+
 
         Report report = new Report(mammals, reptiles);
+
 
         System.out.println(report.getReport());
 
     }
 
 
+    /**
+     * We're filling up the arrays here.
+     */
     public static void fillArrays() {
         Scanner scanner = null;
 
@@ -42,6 +47,7 @@ public class ReportTester {
 
         int index = 0;
 
+        //full up the object arrays from the text file.
         while (scanner.hasNext()) {
 
             String typ;
@@ -52,7 +58,7 @@ public class ReportTester {
             String fod = "";
 
             typ = scanner.next();
-            System.out.println(typ); //DEBUG
+            //System.out.println(typ); //DEBUG
 
             nam = scanner.next();
 
@@ -74,11 +80,11 @@ public class ReportTester {
             //fill object arrays
             if (typ.equalsIgnoreCase("mammal")) {
                 mammals.add(new Mammal(nam, spe, cat, env, fod));
-                System.out.println("mammal add");
+                //System.out.println("mammal add"); //DEBUG
             }
              else if (typ.equalsIgnoreCase("reptile")) {
                 reptiles.add(new Reptile(nam, spe, cat, env, fod));
-                System.out.println("reptile add");
+                //System.out.println("reptile add"); //DEBUG
 
             }
 
@@ -87,7 +93,6 @@ public class ReportTester {
         }
 
     }
-
 
 
 }
