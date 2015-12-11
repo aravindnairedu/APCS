@@ -24,7 +24,7 @@ public class ReportTester {
         fillArrays();
 
 
-        Report report = new Report(mammals, reptiles);
+        Report report = new Report(mammals, reptiles, file);
 
 
         System.out.println(report.getReport());

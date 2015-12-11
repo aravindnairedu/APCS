@@ -1,6 +1,7 @@
 package edu.kyleknobloch.APCS.Classwork.December.Animals;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 
 /**
@@ -10,16 +11,19 @@ public class Report {
 
     private ArrayList<Mammal> mammals = new ArrayList<>();
     private ArrayList<Reptile> reptiles = new ArrayList<>();
-
+    private String report;
 
     /**
      * default constructro
      * @param Mammal mammal ArrayList<Mammal>
      * @param Reptiles reptile ArrayList<Reptile>
      */
-    public Report (ArrayList<Mammal> Mammal, ArrayList<Reptile> Reptiles) {
+    public Report (ArrayList<Mammal> Mammal, ArrayList<Reptile> Reptiles, String headerTitle) {
+        Date date = new Date();
+
         mammals = Mammal;
         reptiles = Reptiles;
+        report = headerTitle + " Report\nDate of report: " + date.toString() + "\n";
 
     }
 
@@ -30,10 +34,14 @@ public class Report {
      */
     public String getReport () {
 
-        String report = "0.) Type    | Name, Category | Species | Envierment | Food Source\n";
+
+        report = report + "0). Type    | Name, Category | Species | Envierment | Food Source\n";
+
         int mainINDEX = 1;
 
         //$number.) $type, $name, $catagory, $species, $envierment, $FoodSource
+
+        mammals.get(1).getName().length() ;
 
         //mammals
         for (int i = 0; i < mammals.size(); i++) {
