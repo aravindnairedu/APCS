@@ -1,5 +1,8 @@
 package edu.kyleknobloch.APCS.Classwork.December.Animals;
 
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -12,6 +15,7 @@ public class Report {
     private ArrayList<Mammal> mammals = new ArrayList<>();
     private ArrayList<Reptile> reptiles = new ArrayList<>();
     private String report;
+    private boolean calcRan;
 
     /**
      * default constructro
@@ -24,6 +28,7 @@ public class Report {
         mammals = Mammal;
         reptiles = Reptiles;
         report = headerTitle + " Report\nDate of report: " + date.toString() + "\n";
+        calcRan = false;
 
     }
 
@@ -34,36 +39,50 @@ public class Report {
      */
     public String getReport () {
 
+        if (!calcRan) {
+            report = report + "0). Type    | Name, Category | Species | Envierment | Food Source\n";
 
-        report = report + "0). Type    | Name, Category | Species | Envierment | Food Source\n";
+            int mainINDEX = 1;
 
-        int mainINDEX = 1;
+            //$number.) $type, $name, $catagory, $species, $envierment, $FoodSource
 
-        //$number.) $type, $name, $catagory, $species, $envierment, $FoodSource
+            mammals.get(1).getName().length();
 
-        mammals.get(1).getName().length() ;
+            //mammals
+            for (int i = 0; i < mammals.size(); i++) {
 
-        //mammals
-        for (int i = 0; i < mammals.size(); i++) {
+                report = report + mainINDEX + ".) Mammal  | " + mammals.get(i).getName() + ", " + mammals.get(i).getCatagory() + " | " +
+                        mammals.get(i).getSpecies() + " | " + mammals.get(i).getClimate() + " | " + mammals.get(i).getFoodSource() + "\n";
 
-            report = report + mainINDEX + ".) Mammal  | " +  mammals.get(i).getName() + ", " + mammals.get(i).getCatagory() + " | " +
-            mammals.get(i).getSpecies() + " | " + mammals.get(i).getClimate() + " | " + mammals.get(i).getFoodSource() +"\n";
+                mainINDEX++;
 
-            mainINDEX++;
+            }
 
-        }
+            //reptiles
+            for (int i = 0; i < reptiles.size(); i++) {
 
-        //reptiles
-        for (int i = 0; i < reptiles.size(); i++) {
+                report = report + mainINDEX + ".) Reptial | " + reptiles.get(i).getName() + ", " + reptiles.get(i).getCatagory() + " | " +
+                        reptiles.get(i).getSpecies() + " | " + reptiles.get(i).getClimate() + " | " + reptiles.get(i).getFoodSource() + "\n";
 
-            report = report + mainINDEX + ".) Reptial | " +  reptiles.get(i).getName() + ", " + reptiles.get(i).getCatagory() + " | " +
-                    reptiles.get(i).getSpecies() + " | " + reptiles.get(i).getClimate() + " | " + reptiles.get(i).getFoodSource() + "\n";
+                mainINDEX++;
 
-            mainINDEX++;
+            }
 
+            calcRan = true;
         }
 
         return report;
+
+    }
+
+
+    public void printReportToFile(String fileName) throws FileNotFoundException, UnsupportedEncodingException {
+
+        PrintWriter writer = new PrintWriter(fileName + ".txt", "UTF-8");
+        writer.println(getReport());
+        writer.close();
+
+
 
     }
 

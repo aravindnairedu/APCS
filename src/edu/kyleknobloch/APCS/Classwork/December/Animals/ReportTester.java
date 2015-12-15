@@ -2,6 +2,7 @@ package edu.kyleknobloch.APCS.Classwork.December.Animals;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.StringTokenizer;
@@ -17,7 +18,7 @@ public class ReportTester {
     private static ArrayList<Reptile> reptiles = new ArrayList<>();
 
 
-    public static void main (String args[]) {
+    public static void main (String args[]) throws FileNotFoundException, UnsupportedEncodingException {
         file = "Animals.txt";
 
 
@@ -28,6 +29,7 @@ public class ReportTester {
 
 
         System.out.println(report.getReport());
+        report.printReportToFile("test");
 
     }
 
