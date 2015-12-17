@@ -1,5 +1,6 @@
 package edu.kyleknobloch.APCS.Classwork.September;
-import javax.swing.JOptionPane;
+
+import javax.swing.*;
 
 /**
    This program demonstrates using dialogs with

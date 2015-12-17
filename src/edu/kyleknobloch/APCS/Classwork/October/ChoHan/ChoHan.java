@@ -14,8 +14,8 @@ public class ChoHan
 
 
        // Get the player's names.
-       player1Name = JO.showInputDialog(null, "Enter the first player's name: ");
-       player2Name = JO.showInputDialog(null, "Enter the second player's name: ");
+       player1Name = JOptionPane.showInputDialog(null, "Enter the first player's name: ");
+       player2Name = JOptionPane.showInputDialog(null, "Enter the second player's name: ");
 
        // Create the dealer.
        Dealer dealer = new Dealer();
@@ -130,7 +130,7 @@ public class ChoHan
        else
           message = "Both players are tied!";
 
-       JO.showMessageDialog(null, "Game over. Here are the results:\n" + player1.getName() + ": " + player1.getPoints() + " points.\n" + player2.getName() + ": " + player2.getPoints() + " points.\n" + message);
+       JOptionPane.showMessageDialog(null, "Game over. Here are the results:\n" + player1.getName() + ": " + player1.getPoints() + " points.\n" + player2.getName() + ": " + player2.getPoints() + " points.\n" + message);
 
    }
 }

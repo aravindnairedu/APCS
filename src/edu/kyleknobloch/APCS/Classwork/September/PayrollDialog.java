@@ -1,7 +1,6 @@
 package edu.kyleknobloch.APCS.Classwork.September;
-import com.sun.beans.editors.StringEditor;
 
-import javax.swing.JOptionPane;
+import javax.swing.*;
 import java.util.StringTokenizer;
 
 /**

@@ -1,5 +1,6 @@
 package edu.kyleknobloch.APCS.Students.Toby;
-import javax.swing.JOptionPane;
+
+import javax.swing.*;
 
 
 public class Game {
