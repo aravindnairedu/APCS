@@ -1,15 +1,12 @@
 package edu.kyleknobloch.APCS.Classwork.December.Shapes;
 
-
-public abstract class TwoD {
-
-    private double length;
-    private double width;
-
+/**
+ * 2D Objects
+ */
+public class TwoD extends Shape{
 
     public TwoD(double l, double w) {
-        length = l;
-        width = w;
+        super(l, w);
 
     }
 
@@ -17,15 +14,9 @@ public abstract class TwoD {
     /**
      * get methods
      */
-    public abstract double getArea();
+    public double getArea() { return getLength() * getWidth(); }
 
-    public abstract double getPerimeter();
+    public double getPerimeter() { return getLength() * getLength() * getLength(); }
 
-    public double getLength() {
-        return length;
-    }
 
-    public double getWidth() {
-        return width;
-    }
 }

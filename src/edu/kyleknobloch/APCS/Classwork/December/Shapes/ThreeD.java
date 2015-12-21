@@ -1,31 +1,24 @@
 package edu.kyleknobloch.APCS.Classwork.December.Shapes;
 
 /**
- * Created by kyleknobloch on 12/17/15,
- * For
- * *
- * Actions:
+ * 3D Objects
  */
-public abstract class ThreeD extends TwoD {
+public class ThreeD extends TwoD {
 
-    public ThreeD(double l, double w) {
+    private double height;
+
+    public ThreeD(double l, double w, double h) {
         super(l, w);
+        height = h;
 
     }
 
-    public abstract double getVolume ();
 
-    public abstract double getSA ();
+    public double getVolume () { return getLength() * getWidth() * getHeight(); }
 
-    @Override
-    public double getArea() {
-        return getSA();
-    }
+    public double getSA () { return 2 * ((getLength()*getWidth()) + (getHeight()*getLength()) + (getHeight()*getWidth())); }
 
 
-    @Override
-    public double getPerimeter() {
-        return getLength() * 12;
-    }
+    public double getHeight() { return height; }
 
 }

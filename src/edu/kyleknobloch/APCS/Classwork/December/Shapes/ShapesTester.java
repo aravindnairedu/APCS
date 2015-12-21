@@ -7,13 +7,13 @@ public class ShapesTester {
 
     public static void main (String args[]) {
 
-        Square sq = new Square(80);
-        Cube   cb = new Cube(90);
 
-        System.out.println("Square " + sq.getLength() + "\nArea: " + sq.getArea() + "\nPerimeter: " + sq.getPerimeter());
+        Shape[] shapes = new Shape[4];
 
-        System.out.println("\nCube " + cb.getLength() + "\nPerimeter: " + cb.getPerimeter() + "\nSA: " + cb.getSA() +
-                           "\nVolume: " + cb.getVolume());
+        shapes[0] = new Square(80);
+        shapes[1] = new Cube(6);
+        shapes[2] = new Square(243);
+        shapes[3] = new Cube(90);
 
 
     }
