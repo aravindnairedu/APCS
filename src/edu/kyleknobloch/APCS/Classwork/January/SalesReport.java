@@ -52,28 +52,25 @@ public class SalesReport
          averageSales = totalSales / months;
 
          // Display the results.
-         JOptionPane.showMessageDialog(null,
-                         "Number of months: " + months +
-                         "\nTotal Sales: $" +
-                         dollar.format(totalSales) +
-                         "\nAverage Sales: $" +
+         JOptionPane.showMessageDialog(null, "Number of months: " + months + "\nTotal Sales: $" + dollar.format(totalSales) +
+                         "\nAverage Sales/mo: $" +
                          dollar.format(averageSales));
       }
       catch(FileNotFoundException e)
       {
          // Thrown by the Scanner constructor when
          // the file is not found.
-         JOptionPane.showMessageDialog(null,
-                            "The file " + filename +
-                            " does not exist.");
+         JOptionPane.showMessageDialog(null, "The file " + filename + " does not exist.");
       }
       catch(InputMismatchException e)
       {
          // Thrown by the Scanner class's nextDouble
          // method when a non-numeric value is found.
-         JOptionPane.showMessageDialog(null,
-                      "Non-numeric data found " +
-                      "in the file.");
+         JOptionPane.showMessageDialog(null, "Non-numeric data found in the file.");
+      }
+      catch (Exception e) {
+         //loo
+         JOptionPane.showMessageDialog(null, "Some crazy shit went down! Lets try that again... ");
       }
       
       System.exit(0);
