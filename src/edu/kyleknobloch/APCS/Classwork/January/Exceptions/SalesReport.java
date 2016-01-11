@@ -1,4 +1,4 @@
-package edu.kyleknobloch.APCS.Classwork.January;
+package edu.kyleknobloch.APCS.Classwork.January.Exceptions;
 
 import javax.swing.*;
 import java.io.File;

@@ -1,4 +1,4 @@
-package edu.kyleknobloch.APCS.Classwork.January;
+package edu.kyleknobloch.APCS.Classwork.January.Exceptions;
 
 import javax.swing.*;
 import java.io.File;
@@ -7,10 +7,10 @@ import java.text.DecimalFormat;
 import java.util.InputMismatchException;
 import java.util.Scanner;
  
- /**
-    This program demonstrates how exception handlers can
-    be used to recover from errors.
- */
+/**
+  This program demonstrates how exception handlers can
+  be used to recover from errors.
+*/
  public class SalesReport2
  {
     public static void main(String[] args)
