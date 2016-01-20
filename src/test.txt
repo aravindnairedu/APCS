@@ -1,0 +1,9 @@
+Animals.txt Report
+Date of report: Thu Dec 17 13:56:07 EST 2015
+0). Type    | Name, Category | Species | Envierment | Food Source
+1.) Mammal  | Cat, Big |  The Cougar |  Mountainous regions |  Deer, Moose, Mice
+2.) Mammal  | DomesticDog, Doge |  The Pug |  Andruseph’s House |  COOKIEZ, people food
+3.) Mammal  | ????, MYTHICALMONSTER |  SHARK ODILE |  EVERY WATER SOURCE ON THE PLANET |  ONLY THE HUMANS
+4.) Reptial | Crocodile, Crocodilian |  Saltwater Crocodile |  Aquatic or semi-aquatic environments in any tropical place |  Buffalo, Zebra, Fish, Sharks, Birds, Humans, Snakes
+5.) Reptial | Anaconda, Snake |  Green Anaconda |  Rainforest, Swamps, Rivers, Slow-moving Streams |  Caimans, Birds, Monkeys, Capybaras, Humans
+
