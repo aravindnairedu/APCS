@@ -32,7 +32,7 @@ public class BoysAndGirls {
 
         /* boys */
         try{
-            // Open the file.
+            // Open the files
             File boyFILE = new File(boysFile);
             Scanner theBoy = new Scanner(boyFILE);
 
@@ -45,7 +45,7 @@ public class BoysAndGirls {
             while (theBoy.hasNext())
             {
                 boys.add(theBoy.next());
-                System.out.print("boy"); //DEBUG
+                //System.out.print("boy"); //DEBUG
             }
 
             /**
@@ -54,42 +54,53 @@ public class BoysAndGirls {
             while (theGirl.hasNext())
             {
                 girls.add(theGirl.next());
-                System.out.print("girl"); //DEBUG
+                //System.out.print("girl"); //DEBUG
             }
 
-            // Close the file.
+            // Close the files
             theBoy.close();
             theGirl.close();
         }
-        catch(FileNotFoundException e)
+        catch(FileNotFoundException e) //Catch if no file found.
         {
-            // Thrown by the Scanner constructor when
-            // the file is not found.
             JOptionPane.showMessageDialog(null, "The file " + boysFile + " does not exist.");
         }
-        catch(InputMismatchException e)
+        catch(InputMismatchException e) //catch is wrong data type
         {
-            // Thrown by the Scanner class's nextDouble
-            // method when a non-numeric value is found.
             JOptionPane.showMessageDialog(null, "Non-numeric data found in the file.");
         }
-        catch (Exception e) {
-            //loo
+        catch (Exception e) { //Evreything else
             JOptionPane.showMessageDialog(null, "Some crazy shit went down! Lets try that again... " + e);
         }
 
-        System.out.println("it is done.");
+        System.out.println("it is done."); //DEBUG
     }
 
     public String search (String name) {
         int count = 0;
 
 
+        /**
+         * boys search
+         */
+        for (int i = 0; i < boys.size(); i++) {
+            if (name.equalsIgnoreCase(boys.get(i))) {
+                count++;
+            }
+        }
 
 
+        /**
+         * girls search
+         */
+        for (int i = 0; i < girls.size(); i++) {
+            if (name.equalsIgnoreCase(girls.get(i))) {
+                count++;
+            }
+        }
 
-
-        return "The name \"" + name + "\" Appeared " + count + "times.";
+        //return in message form
+        return "The name \"" + name + "\" Appeared " + count + " time(s).";
     }
 
 

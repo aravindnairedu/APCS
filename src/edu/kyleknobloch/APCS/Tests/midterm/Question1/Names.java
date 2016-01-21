@@ -1,5 +1,7 @@
 package edu.kyleknobloch.APCS.Tests.midterm.Question1;
 
+import javax.swing.*;
+
 /**
  * Kyle Knobloch
  * AP Computer Science Midterm Exam
@@ -16,9 +18,12 @@ package edu.kyleknobloch.APCS.Tests.midterm.Question1;
 public class Names {
 
     public static void main (String args[]) {
+
         BoysAndGirls names = new BoysAndGirls();
 
-    }
+        String name = JOptionPane.showInputDialog(null, "What is the name you're searching for? ");
+        JOptionPane.showMessageDialog(null, names.search(name));
 
+    }
 
 }
