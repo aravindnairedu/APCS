@@ -1,6 +1,6 @@
 package edu.kyleknobloch.APCS.Classwork.January.Exceptions;
 
-import javax.swing.*;
+import javax.swing.JOptionPane;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
