@@ -29,7 +29,7 @@ public class TempGrid {
         boolean isTolerence = true;
 
 
-        for (int row = 0; row < temp.length; row++) {
+        /*for (int row = 0; row < temp.length; row++) {
             for (int col = 0; col < temp[row].length; col++) {
                 newTemp[row][col] = computeTemp(row, col); //elements unchanged
                 if (Math.abs(temp[row][col] - newTemp[row][col]) >= tolerance) {
@@ -37,8 +37,8 @@ public class TempGrid {
                 }
             }
         }
-
+        */
         newTemp =  temp;
-        return isTolerence;
+        return true;
     }
 }

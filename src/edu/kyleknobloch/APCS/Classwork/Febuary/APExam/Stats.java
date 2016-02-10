@@ -10,7 +10,7 @@ import java.util.ArrayList;
  */
 public class Stats {
 
-    public static void main(String args) {
+    public static void main(String args[]) {
         ArrayList<ScoreInfo> si = new ArrayList<>();
         si.add(new ScoreInfo(12345678));
         si.add(new ScoreInfo(44339587));
