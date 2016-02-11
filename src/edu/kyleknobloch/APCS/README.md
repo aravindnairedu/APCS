@@ -3,21 +3,20 @@
 #### Packages ####
 
 * Classwork
-  * September
-    * Challenge
-    * Files
-    * Numbers
-    * Random
-    * TesterProjects
-      * _Classworks with Projects_ 
+  * September 
   * October
-    * Callenge
-    * ChoHan
+  * November
+  * December
+  * January
+  * February
 * Homework
   * September 
   * October
+  * November
+  * December
 * Notes
 * Students
   * Toby
 * SummerWork
   * _Summer work_
+  
