@@ -28,38 +28,30 @@ public class RecursiveBinarySearch
       do
       {
          // Get a value to search for.
-         System.out.print("Enter a value to " +
-                          "search for: ");
+         System.out.print("Enter a value to search for: ");
          searchValue = keyboard.nextInt();
 
          // Search for the value
-         result = binarySearch(numbers, 0, 
-                               (numbers.length - 1),
-                               searchValue);
+         result = binarySearch(numbers, 0, (numbers.length - 1), searchValue);
 
          // Display the results.
          if (result == -1)
          {
-            System.out.println(searchValue + 
-                               " was not found.");
+            System.out.println(searchValue + " was not found.");
          }
          else
          {
-            System.out.println(searchValue +
-                               " was found at " +
-                               "element " + result);
+            System.out.println(searchValue + " was found at element " + result);
          }
 
          // Does the user want to search again?
-         System.out.print("Do you want to search again? " +
-                          "(Y or N): ");
+         System.out.print("Do you want to search again? (Y or N): ");
          // Consume the remaining newline.
          keyboard.nextLine();
          // Read a line of input.
          input = keyboard.nextLine();
 
-      } while (input.charAt(0) == 'y' ||
-               input.charAt(0) == 'Y');
+      } while (input.charAt(0) == 'y' || input.charAt(0) == 'Y');
    }
 
    /**
@@ -73,8 +65,9 @@ public class RecursiveBinarySearch
               otherwise -1.
    */
 
-   public static int binarySearch(int[] array, int first,
-                                  int last, int value)
+   //Would be more code and memory efficient to stor the array in the class and not the method.
+
+   public static int binarySearch(int[] array, int first, int last, int value)
    {
       int middle;     // Mid point of search
         
@@ -90,10 +83,18 @@ public class RecursiveBinarySearch
       if (array[middle] == value)
          return middle;
       else if (array[middle] < value)
-         return binarySearch(array, middle + 1,
-                             last, value);
+         return binarySearch(array, middle + 1, last, value);
       else
-         return binarySearch(array, first,
-                             middle - 1, value);
+         return binarySearch(array, first, middle - 1, value);
+   }
+
+    /**
+     * for the lazy people in us
+     * @param array - array to search
+     * @param value - value to search for
+     * @return return position of value.
+     */
+   public static int bianarySearch(int[] array, int value) {
+      return binarySearch(array, 0, (array.length - 1), value);
    }
 }
