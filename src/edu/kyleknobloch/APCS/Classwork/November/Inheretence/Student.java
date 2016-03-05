@@ -8,7 +8,7 @@ import java.util.Random;
 public class Student {
 
 
-    final int CURRENTYEAR = 2015;
+    private final int CURRENT_YEAR = 2016;
 
     private String firstName;
     private String lastName;
@@ -18,6 +18,7 @@ public class Student {
     private String contactNumbers;
     private int studentID;
     private int YoG;
+    private int absences;
 
 
     public Student (String firstName, String lastName, String middleInitiel, String addres, String phoneNumber, String contactNumbers) {
@@ -28,10 +29,24 @@ public class Student {
         this.address = addres;
         this.phoneNumber = phoneNumber;
         this.contactNumbers = contactNumbers;
+        absences = 0;
 
         studentID = setStudentID();
-        YoG = CURRENTYEAR + 4;
+        YoG = CURRENT_YEAR + 4;
 
+    }
+
+    public Student (String firstName, int absences) {
+        this.firstName = firstName;
+        this.absences = absences;
+
+        this.lastName = "null";
+        this.middleInitial = "null";
+        this.address = "null";
+        this.phoneNumber = "null";
+        this.contactNumbers = "null";
+        studentID = setStudentID();
+        YoG = CURRENT_YEAR + 4;
     }
 
 
@@ -47,7 +62,8 @@ public class Student {
                 "\nPhone Number: " + getPhoneNumber() +
                 "\nContact Numbers: " + getContactNumbers() +
                 "\nID: " + getStudentID() +
-                "\nYoG: " + getYoG() + " \n";
+                "\nYoG: " + getYoG() +
+                "\nAbsences: " + getAbsences() + " \n";
     }
 
     /**
@@ -55,6 +71,10 @@ public class Student {
      */
     public int getStudentID() {
         return studentID;
+    }
+
+    public int getAbsences() {
+        return absences;
     }
 
     public int getYoG() {
