@@ -2,7 +2,6 @@ package edu.kyleknobloch.APCS.Classwork.March.Chap15HW;
 
 import java.util.ArrayList;
 
-
 public class Ex2 {
 
     /**
