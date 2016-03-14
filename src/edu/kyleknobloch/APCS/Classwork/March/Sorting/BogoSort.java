@@ -1,4 +1,4 @@
-package edu.kyleknobloch.APCS.Classwork.March;
+package edu.kyleknobloch.APCS.Classwork.March.Sorting;
 
 import java.util.Arrays;
 import java.util.Random;
