@@ -3,7 +3,7 @@ package edu.kyleknobloch.APCS.Classwork.March.Arrays;
 import java.util.ArrayList;
 
 /**
- *
+ * Array Utilities
  */
 public class ArrayUtilities {
 

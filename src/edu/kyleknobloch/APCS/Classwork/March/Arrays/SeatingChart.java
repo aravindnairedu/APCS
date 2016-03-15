@@ -4,6 +4,9 @@ import edu.kyleknobloch.APCS.Classwork.November.Inheretence.Student;
 
 import java.util.ArrayList;
 
+/**
+ * Seating Chart Code Challenge
+ */
 public class SeatingChart {
 
 
@@ -29,8 +32,15 @@ public class SeatingChart {
         System.out.print(sc.removeAbsentStudent(4));
     }
 
+
     private Student[][] seats;
 
+    /**
+     * Constructor
+     * @param studentList - the list of students
+     * @param rows - number of rows
+     * @param cols - number of colloms
+     */
     public SeatingChart(ArrayList<Student> studentList, int rows, int cols) {
         int index = 0;
         seats = new Student[rows][cols];
@@ -52,6 +62,12 @@ public class SeatingChart {
             System.out.println("There was too many seats, " + (index - (studentList.size() -1 )) + " empty seat(s) was included. ");
     }
 
+
+    /**
+     * Removes absent students
+     * @param threshold - how many absences are they allowed to have
+     * @return - number of removed students
+     */
     public int removeAbsentStudent(int threshold) {
 
         int count = 0;
@@ -63,10 +79,10 @@ public class SeatingChart {
 
         for (int c = 0; c < seats.length -1; c++) {
             for (int r = 0; r < seats[c].length -1; r++) {
-                if (seats[c][r] != null)
-                    if (seats[c][r].getAbsences() > threshold)
-                        seats[c][r] = null;
-                count++;
+                if (seats[c][r] != null && seats[c][r].getAbsences() > threshold) {
+                    seats[c][r] = null;
+                    count++;
+                }
             }
         }
 

@@ -1,7 +1,7 @@
 package edu.kyleknobloch.APCS.Classwork.March.Arrays;
 
 /**
- *
+ * Array Tester
  */
 public class ArrayTester {
 
