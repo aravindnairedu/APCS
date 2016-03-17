@@ -7,7 +7,7 @@ public class ArrayTester {
 
     public static void main(String args[]) {
 
-        ArrayUtilities au = new ArrayUtilities("Array.txt");
+        ArrayUtilities au = new ArrayUtilities("num.txt");
 
         au.sysLinePrintArray();
 

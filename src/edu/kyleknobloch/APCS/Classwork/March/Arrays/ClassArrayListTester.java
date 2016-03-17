@@ -7,7 +7,7 @@ public class ClassArrayListTester {
 
     public static void main (String args[]) {
 
-        ClassArrayListUtilities CALU = new ClassArrayListUtilities("Array.txt");
+        ClassArrayListUtilities CALU = new ClassArrayListUtilities("num.txt");
 
         CALU.sysLinePrintArray();
 

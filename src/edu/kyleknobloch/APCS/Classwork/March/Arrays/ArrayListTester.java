@@ -7,7 +7,7 @@ public class ArrayListTester {
 
     public static void main (String args[]) {
 
-        ArrayListUtilities ALU = new ArrayListUtilities("Array.txt");
+        ArrayListUtilities ALU = new ArrayListUtilities("num.txt");
 
         ALU.sysLinePrintArray();
 
