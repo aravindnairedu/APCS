@@ -74,7 +74,6 @@ public class ClassArrayListUtilities {
 
         if (inArrayIndex >= 0)
             array.get(inArrayIndex).incidentOccurrences();
-
         else {
             for (int i = 0; i <= array.size(); i++) {
                 //System.out.print("loop"); //DEBUG

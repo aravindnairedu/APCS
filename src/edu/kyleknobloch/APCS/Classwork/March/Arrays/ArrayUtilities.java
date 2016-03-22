@@ -58,6 +58,38 @@ public class ArrayUtilities {
 
 
     /**
+     * Insert a element into a array
+     * @param element - element to be inserted
+     */
+    public void insert(int element) {
+        int[] temp = new int[array.length +1];
+        int insertIndex = 0;
+
+        temp = array;
+
+        if (search(element) >= 0)
+            System.out.print("This item is already in the array.");
+        else {
+            for (int i = 0; i <= array.length; i++) {
+                //System.out.print("loop"); //DEBUG
+                if (i == array.length || element < array[i]) {
+                    //System.out.print("if"); //DEBUG
+                    insertIndex = i;
+                    break;
+                }
+            }
+
+            for (int i = temp.length -1; i > insertIndex ; i--) {
+                temp[i] = temp[i-1];
+            }
+
+            temp[insertIndex] = element;
+
+        }
+
+    }
+
+    /**
      * print array list with System.out.print();
      */
     public void sysLinePrintArray() {

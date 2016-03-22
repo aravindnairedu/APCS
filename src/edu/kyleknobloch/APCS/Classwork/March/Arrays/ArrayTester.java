@@ -13,5 +13,8 @@ public class ArrayTester {
 
         System.out.println("\n45 is at index " + au.search(45) + ".");
 
+        au.insert(9999);
+        au.sysLinePrintArray();
+
     }
 }
