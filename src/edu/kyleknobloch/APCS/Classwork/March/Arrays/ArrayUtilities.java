@@ -24,9 +24,9 @@ public class ArrayUtilities {
 
         array = new int[arrayList.size()];
 
-        for (int i = 0; i < arrayList.size(); i++) {
+        for (int i = 0; i < arrayList.size(); i++)
             array[i] = arrayList.get(i);
-        }
+
 
     }
 
@@ -65,30 +65,36 @@ public class ArrayUtilities {
         int[] temp = new int[array.length +1];
         int insertIndex = 0;
 
+
+        //fill the array
         for (int i = 0; i < array.length; i++)
             temp[i] = array[i];
 
+
         if (search(element) >= 0)
+            //check to see if the element is already in the array
             System.out.print("This item is already in the array.");
-        else {
+
+        else { //Well, it's not a dupe soooo
+
+
             for (int i = 0; i <= array.length; i++) {
-                //System.out.print("loop"); //DEBUG
                 if (i == array.length || element < array[i]) {
-                    //System.out.print("if"); //DEBUG
                     insertIndex = i;
                     break;
                 }
             }
 
+            //moving elements
             for (int i = temp.length -1; i > insertIndex ; i--) {
                 temp[i] = temp[i-1];
             }
 
-            temp[insertIndex] = element;
+            temp[insertIndex] = element; //add the new element
 
         }
 
-        array = temp;
+        array = temp; //finished, reassign to array in class
 
     }
 
@@ -97,8 +103,6 @@ public class ArrayUtilities {
      */
     public void sysLinePrintArray() {
         System.out.print("\n");
-        for (int i = 0; i < array.length; i++) {
-            System.out.println(i + ": " + array[i]);
-        }
+        for (int i = 0; i < array.length; i++) System.out.println(i + ": " + array[i]);
     }
 }
