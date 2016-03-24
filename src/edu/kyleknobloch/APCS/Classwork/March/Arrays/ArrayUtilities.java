@@ -65,7 +65,8 @@ public class ArrayUtilities {
         int[] temp = new int[array.length +1];
         int insertIndex = 0;
 
-        temp = array;
+        for (int i = 0; i < array.length; i++)
+            temp[i] = array[i];
 
         if (search(element) >= 0)
             System.out.print("This item is already in the array.");
@@ -86,6 +87,8 @@ public class ArrayUtilities {
             temp[insertIndex] = element;
 
         }
+
+        array = temp;
 
     }
 
