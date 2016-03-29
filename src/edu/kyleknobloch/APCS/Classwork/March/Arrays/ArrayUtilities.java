@@ -98,6 +98,24 @@ public class ArrayUtilities {
 
     }
 
+
+    /**
+     * Return a element from Index
+     * @param index the index
+     * @return the element from index
+     */
+    public int getFromIndex(int index) { return array[index]; }
+
+
+    /**
+     * Return the Array
+     * @return the array
+     */
+    public int[] getArray() {
+        return array;
+    }
+
+
     /**
      * print array list with System.out.print();
      */
