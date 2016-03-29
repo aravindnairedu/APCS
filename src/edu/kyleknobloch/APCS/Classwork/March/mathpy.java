@@ -20,10 +20,9 @@ public class MathPy {
         max = console.nextInt();
 
 
-        for (double i = 2.0; i < max; i++) {
-            double math = 1.0 - ( 1.0 / i);
-            sum = sum * math;
-        }
+        for (double i = 2.0; i < max; i++)
+            sum = sum * (1.0 - (1.0 / i));
+
 
         System.out.print("Sum is: " + sum);
 

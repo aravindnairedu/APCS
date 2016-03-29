@@ -1,4 +1,4 @@
-package edu.kyleknobloch.APCS.Classwork.March.Arrays;
+package edu.kyleknobloch.APCS.Classwork.March;
 
 import edu.kyleknobloch.APCS.Classwork.November.Inheretence.Student;
 
