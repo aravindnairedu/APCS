@@ -59,9 +59,9 @@ public class HackLanSchool extends GameBase
             g.getGraphics().setColor(black);
             g.drawHorizontallyCenteredString("Hacking LanSchool...", 250, 30);
 
-            g.drawRectangle(50, 45, 400, 99);
+            //g.drawRectangle(50, 45, 400, 99);
             g.getGraphics().setColor(green);
-            g.drawFillRectange(50, 45, (int)(400 * (barPosition * .01)), 100);
+            //g.drawFillRectange(50, 45, (int)(400 * (barPosition * .01)), 100);
 
             g.getGraphics().setFont(updateFont);
             g.getGraphics().setColor(red);
