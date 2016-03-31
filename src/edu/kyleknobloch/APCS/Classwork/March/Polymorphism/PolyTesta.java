@@ -3,10 +3,7 @@ package edu.kyleknobloch.APCS.Classwork.March.Polymorphism;
 import java.util.ArrayList;
 
 /**
- * Created by kyleknobloch on 3/29/16,
- * For
- * *
- * Actions:
+ *
  */
 public class PolyTesta {
 
