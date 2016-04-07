@@ -50,7 +50,7 @@ public class Card {
                 rankName = "Five";
                 break;
             case "6":
-                rankName = "Siz";
+                rankName = "Six";
                 break;
             case "7":
                 rankName = "Seven";
@@ -74,7 +74,7 @@ public class Card {
                 rankName = "King";
                 break;
             default:
-                rankName = "Rank was not recognised.";
+                rankName = "Rank was not recognised: " + getRank();
                 break;
         }
 
@@ -140,8 +140,13 @@ public class Card {
      * @return if the card matches or not.
      */
     public boolean matches(Card otherCard) {
-        return ( ( otherCard.getSuit().equals(getSuit()) ) && ( otherCard.getRank().equals(getRank()) ) );
+        return (
+                ( otherCard.getSuit().equals(getSuit()) ) &&
+                ( otherCard.getRank().equals(getRank()) ) &&
+                ( otherCard.getPointValue() == (getPointValue()) )
+               );
     }
+
 
     /**
      * toString
@@ -151,4 +156,5 @@ public class Card {
     public String toString() {
         return getName() + " (point value: " + getPointValue() + ")";
     }
+
 }

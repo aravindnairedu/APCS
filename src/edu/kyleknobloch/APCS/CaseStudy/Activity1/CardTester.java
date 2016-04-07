@@ -21,6 +21,10 @@ public class CardTester {
 
         System.out.println(KingOfClubs.rank() + KingOfClubs.suit() + KingOfClubs.pointValue() + KingOfClubs.toString() + KingOfClubs.getName());
 
+        Card TwoOfDiamond = new Card("Diamonds", "2", 2);
+
+        System.out.println(TwoOfDiamond.toString());
+
     }
 
 }
