@@ -116,6 +116,10 @@ public class Deck {
             deck.set(k, tempC);
         }
 
+        //new game is created by shuffling the deck
+        undealtCards = deck.size() -1;
+        dealtCards = 0;
+
     }
 
 
