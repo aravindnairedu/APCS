@@ -133,6 +133,18 @@ public class Deck {
 
 
     /**
+     * Deals a card from this deck.
+     * @return the card just dealt, or null if all the cards have been previously dealt.
+     */
+    public Card giveCard() { return deal(); }
+    public Card deal() {
+        undealtCards--; //deal the card
+
+		return deck.get(undealtCards); //give the card
+    }
+
+
+    /**
      * getters
      */
 
