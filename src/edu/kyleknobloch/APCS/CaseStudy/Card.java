@@ -140,11 +140,9 @@ public class Card {
      * @return if the card matches or not.
      */
     public boolean matches(Card otherCard) {
-        return (
-                ( otherCard.getSuit().equals(getSuit()) ) &&
-                ( otherCard.getRank().equals(getRank()) ) &&
-                ( otherCard.getPointValue() == (getPointValue()) )
-               );
+        return ( otherCard.getSuit().equals(getSuit()) ) &&
+               ( otherCard.getRank().equals(getRank()) ) &&
+               ( otherCard.getPointValue() == getPointValue() );
     }
 
 

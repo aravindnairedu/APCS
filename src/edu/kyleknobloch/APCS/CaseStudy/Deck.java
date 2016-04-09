@@ -1,5 +1,6 @@
 package edu.kyleknobloch.APCS.CaseStudy;
 
+import javax.swing.*;
 import java.util.ArrayList;
 
 /**
@@ -82,17 +83,29 @@ public class Deck {
      */
     public Deck(String[] ranks, String[] suits, int[] values) {
 
+        /**
+         * Users are stupid:
+         * We're telling them that they imputed different sizes for ranks and values thus the value will not be
+         * assigned to the desired rank by throwing a custom Exception :)
+         */
+        try {
+            if (!(ranks.length == values.length))
+                throw new SizeMismatch("Sizes did not match");
+        } catch (SizeMismatch e) {
+            JOptionPane.showMessageDialog(null, "There was a error with the ranks[] and values[] being different sizes, thus " +
+                    "we can not assign the vales to the rank. Sorry about that! \nError: " + e);
+        }
+
+
         dealtCards   = 0;
         undealtCards = 0;
-
         deck = new ArrayList<>();
+
 
         for (int suitsI = 0; suitsI < suits.length; suitsI++) {
             for (int rankI = 0; rankI < ranks.length; rankI++) {
-                for (int valueI = 0; valueI < values.length; valueI++) {
-                    deck.add(new Card(suits[suitsI], ranks[rankI], values[valueI]));
-                    undealtCards++;
-                }
+                deck.add(new Card(suits[suitsI], ranks[rankI], values[rankI]));
+                undealtCards++;
             }
         }
     }
@@ -100,7 +113,7 @@ public class Deck {
 
     /**
      * Shuffles the deck
-     * @return a suffled deck
+     * @return a shuffled deck
      *
      * **This is stolen from Shuffler class that I found in Activity3**
      */
@@ -109,7 +122,7 @@ public class Deck {
 
         for (int k = deck.size() - 1; k > 0; k--) {
             int pos = (int) (Math.random() * (k + 1));  // range 0 to k, inclusive
-            Card tempC = deck.get(pos);
+             Card tempC = deck.get(pos);
             //values[pos] = values[k];
             //values[k] = temp;
             deck.set(pos, deck.get(k));
@@ -163,10 +176,6 @@ public class Deck {
 
     public Card getFromIndex(int index) {
         return deck.get(index);
-    }
-
-    public int getWholeSize() {
-        return deck.size() -1;
     }
 
 
