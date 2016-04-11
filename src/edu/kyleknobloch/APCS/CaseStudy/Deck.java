@@ -85,12 +85,12 @@ public class Deck {
 
         /**
          * Users are stupid:
-         * We're telling them that they imputed different sizes for ranks and values thus the value will not be
-         * assigned to the desired rank by throwing a custom Exception :)
+         * We're telling them that they inputted different sizes for ranks and values thus the value will not be
+         * assigned to the desired rank by throwing a Exception :)
          */
         try {
             if (!(ranks.length == values.length))
-                throw new SizeMismatch("Sizes did not match");
+                throw new SizeMismatch();
         } catch (SizeMismatch e) {
             JOptionPane.showMessageDialog(null, "There was a error with the ranks[] and values[] being different sizes, thus " +
                     "we can not assign the vales to the rank. Sorry about that! \nError: " + e);
@@ -115,7 +115,7 @@ public class Deck {
      * Shuffles the deck
      * @return a shuffled deck
      *
-     * **This is stolen from Shuffler class that I found in Activity3**
+     * **This is stolen from Shuffler class in Activity 3**
      */
     public void shuffle() { shuffleDeck(); }
     public void shuffleDeck() {

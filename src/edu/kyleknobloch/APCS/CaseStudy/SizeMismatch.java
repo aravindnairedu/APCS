@@ -6,7 +6,7 @@ package edu.kyleknobloch.APCS.CaseStudy;
 
 public class SizeMismatch extends Exception {
 
-    private String message = null;
+    private String message = "There was a size mismatch";
 
     public SizeMismatch()
     {
