@@ -17,7 +17,7 @@ public class ShufflerTester {
         //"perfect" shuffle
         System.out.println("Results of " + SHUFFLE_COUNT + " consecutive perfect shuffles:");
 
-        int[] values = {0, 1, 2, 3};
+        int[] values = {0, 1, 2, 3, 4, 5};
 
 
 

@@ -12,7 +12,7 @@ public class Shuffler {
      */
     public static void perfectShuffle(int[] values) {
         int[] temp = new int[values.length];
-        int mid = values.length / 2;
+        int mid = (values.length + 1) / 2;
 
         // Interleave elements 0 ... mid-1 with elements mid ... length-1
         int unshuffledPos = 0;
