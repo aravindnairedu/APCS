@@ -6,6 +6,13 @@ package edu.kyleknobloch.APCS.CaseStudy.Activity5.buggy1;
  */
 public class DeckTester {
 
+	/*
+	isEmpty() is 0 < size and NOT 0 <= size
+	 */
+
+
+
+
 	/**
 	 * The main method in this class checks the Deck operations for consistency
 	 * using assert statements.

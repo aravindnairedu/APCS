@@ -5,6 +5,14 @@ package edu.kyleknobloch.APCS.CaseStudy.Activity5.buggy4;
  */
 public class DeckTester {
 
+	/*
+	Size variable is wrong or you decrement the size var then never increese the size in the ArrayList.get()
+	 */
+
+
+
+
+
 	/**
 	 * The main method in this class checks the Deck operations for consistency
 	 * using assert statements.

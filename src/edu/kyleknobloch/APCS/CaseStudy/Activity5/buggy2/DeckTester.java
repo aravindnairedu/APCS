@@ -5,6 +5,13 @@ package edu.kyleknobloch.APCS.CaseStudy.Activity5.buggy2;
  */
 public class DeckTester {
 
+	/*
+	The size variable is never incrimented correctly.
+	 */
+
+
+
+
 	/**
 	 * The main method in this class checks the Deck operations for consistency
 	 * using assert statements.

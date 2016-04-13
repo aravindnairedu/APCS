@@ -5,6 +5,10 @@ package edu.kyleknobloch.APCS.CaseStudy.Activity5.buggy3;
  */
 public class DeckTester {
 
+	/*
+	The decks are using perfict suffle or only have 1 of the same card
+	 */
+
 	/**
 	 * The main method in this class checks the Deck operations for consistency
 	 * using assert statements.

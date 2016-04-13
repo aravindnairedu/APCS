@@ -4,10 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Deck {
-    private List<Card> cards = new ArrayList();
+    private List<Card> cards;
     private int size;
 
     public Deck(String[] var1, String[] var2, int[] var3) {
+        cards = new ArrayList<>();
         for(int var4 = 1; var4 < var1.length; ++var4) {
             String[] var5 = var2;
             int var6 = var2.length;
@@ -26,7 +27,7 @@ public class Deck {
     }
 
     public int size() {
-        return this.size;
+        return this.cards.size();
     }
 
     public void shuffle() {

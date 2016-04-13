@@ -5,6 +5,12 @@ package edu.kyleknobloch.APCS.CaseStudy.Activity5.buggy5;
  */
 public class DeckTester {
 
+
+
+	/*
+	issues with shuffle. most likley a broken  algorithm
+	 */
+
 	/**
 	 * The main method in this class checks the Deck operations for consistency
 	 * using assert statements.
