@@ -6,6 +6,7 @@ package edu.kyleknobloch.APCS.CaseStudy;
 public class Card {
 
     private String suit;
+    private String suitName;
     private String rank;
     private String rankName;
     private int pointValue;
@@ -20,7 +21,7 @@ public class Card {
      * "heart" use "Hearts"
      * "King" use "K"
      *
-     * @param suit Hearts/Spades/Clubs/Diamonds
+     * @param suit Hearts/Spades/Clubs/Diamonds || H/S/C/D
      * @param value 2-10/A/J/Q/K
      * @param pointValue This game's point value
      */
@@ -28,57 +29,82 @@ public class Card {
 
         this.suit = suit;
         this.rank = value;
-
-        switch (getRank()) {
-            case "A":
-                rankName = "Ace";
-                break;
-            case "1":
-                this.rank = "A";
-                rankName = "Ace";
-                break;
-            case "2":
-                rankName = "Two";
-                break;
-            case "3":
-                rankName = "Three";
-                break;
-            case "4":
-                rankName = "Four";
-                break;
-            case "5":
-                rankName = "Five";
-                break;
-            case "6":
-                rankName = "Six";
-                break;
-            case "7":
-                rankName = "Seven";
-                break;
-            case "8":
-                rankName = "Eight";
-                break;
-            case "9":
-                rankName = "Nine";
-                break;
-            case "10":
-                rankName = "Ten";
-                break;
-            case "J":
-                rankName = "Jack";
-                break;
-            case "Q":
-                rankName = "Queen";
-                break;
-            case "K":
-                rankName = "King";
-                break;
-            default:
-                rankName = "Rank was not recognised: " + getRank();
-                break;
-        }
-
         this.pointValue = pointValue;
+
+
+        if (getRank().length() <= 2) {
+            switch (getRank()) {
+                case "A":
+                    suitName = "Ace";
+                    break;
+                case "1":
+                    this.rank = "A";
+                    rankName = "Ace";
+                    break;
+                case "2":
+                    rankName = "Two";
+                    break;
+                case "3":
+                    rankName = "Three";
+                    break;
+                case "4":
+                    rankName = "Four";
+                    break;
+                case "5":
+                    rankName = "Five";
+                    break;
+                case "6":
+                    rankName = "Six";
+                    break;
+                case "7":
+                    rankName = "Seven";
+                    break;
+                case "8":
+                    rankName = "Eight";
+                    break;
+                case "9":
+                    rankName = "Nine";
+                    break;
+                case "10":
+                    rankName = "Ten";
+                    break;
+                case "J":
+                    rankName = "Jack";
+                    break;
+                case "Q":
+                    rankName = "Queen";
+                    break;
+                case "K":
+                    rankName = "King";
+                    break;
+                default:
+                    rankName = "Rank was not recognised: " + getRank();
+                    break;
+            }
+        } else
+            rankName = rank;
+
+
+        if (getSuit().length() == 1) {
+            switch (getSuit()) {
+                case "C":
+                    suitName = "Clubs";
+                    break;
+                case "D":
+                    suitName = "Diamonds";
+                    break;
+                case "S":
+                    suitName = "Spades";
+                    break;
+                case "H":
+                    suitName = "Hearts";
+                    break;
+                default:
+                    suitName = "Suit was not recognised: " + getSuit();
+                    break;
+            }
+        } else
+            suitName = rank;
 
     }
 
@@ -98,12 +124,28 @@ public class Card {
 
 
     /**
+     *
+     * @param otherCard The other card
+     * @return if the card matches or not.
+     */
+    public boolean matches(Card otherCard) {
+        return ( otherCard.getSuit().equals(getSuit()) ) &&
+                ( otherCard.getRank().equals(getRank()) ) &&
+                ( otherCard.getPointValue() == getPointValue() );
+    }
+
+
+    /**
      * Getters
      */
 
     public String suit() { return getSuit(); }
     public String getSuit() {
         return suit;
+    }
+
+    public String getSuitName() {
+        return suitName;
     }
 
     public String rank() {return getRank(); }
@@ -130,19 +172,7 @@ public class Card {
 
 
     public String getName() {
-        return getRankName() + " of " + getSuit();
-    }
-
-
-    /**
-     *
-     * @param otherCard The other card
-     * @return if the card matches or not.
-     */
-    public boolean matches(Card otherCard) {
-        return ( otherCard.getSuit().equals(getSuit()) ) &&
-               ( otherCard.getRank().equals(getRank()) ) &&
-               ( otherCard.getPointValue() == getPointValue() );
+        return getRankName() + " of " + getSuitName();
     }
 
 

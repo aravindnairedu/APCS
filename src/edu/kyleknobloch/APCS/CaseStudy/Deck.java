@@ -8,6 +8,7 @@ import java.util.ArrayList;
  */
 public class Deck {
 
+    private int shuffleCount;
     private ArrayList<Card> deck;
     private int dealtCards;
     private int undealtCards;
@@ -19,6 +20,7 @@ public class Deck {
     public Deck() {
 
         //Class vars
+        shuffleCount = 10;
         dealtCards   = 0;
         undealtCards = 0;
         deck = new ArrayList<>();
@@ -93,7 +95,7 @@ public class Deck {
                 throw new SizeMismatch();
         } catch (SizeMismatch e) {
             JOptionPane.showMessageDialog(null, "There was a error with the ranks[] and values[] being different sizes, thus " +
-                    "we can not assign the vales to the rank. Sorry about that! \nError: " + e);
+                    "the point vaules *may* be wrong. Sorry about that! \nError: " + e);
         }
 
 
@@ -119,16 +121,16 @@ public class Deck {
      */
     public void shuffle() { shuffleDeck(); }
     public void shuffleDeck() {
-
-        for (int k = deck.size() - 1; k > 0; k--) {
-            int pos = (int) (Math.random() * (k + 1));  // range 0 to k, inclusive
-             Card tempC = deck.get(pos);
-            //values[pos] = values[k];
-            //values[k] = temp;
-            deck.set(pos, deck.get(k));
-            deck.set(k, tempC);
+        for (int i = 0; i <= shuffleCount; i++) {
+            for (int k = deck.size() - 1; k > 0; k--) {
+                int pos = (int) (Math.random() * (k + 1));  // range 0 to k, inclusive
+                Card tempC = deck.get(pos);
+                //values[pos] = values[k];
+                //values[k] = temp;
+                deck.set(pos, deck.get(k));
+                deck.set(k, tempC);
+            }
         }
-
         //new game is created by shuffling the deck
         undealtCards = deck.size() -1;
         dealtCards = 0;
