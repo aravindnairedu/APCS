@@ -3,7 +3,7 @@ package edu.kyleknobloch.APCS.Classwork.Aprl.FiveCardSTUD;
 import java.util.ArrayList;
 
 /**
- *
+ * Five Card STUD
  */
 public class FiveCardSTUD {
 
@@ -39,7 +39,9 @@ public class FiveCardSTUD {
         System.out.print("\n\n");
 
 
-
+        /**
+         * check & declare wins
+         */
         if (findWin(hand1))
             System.out.println("Hand 1 is a winning hand");
         if (findWin(hand2))
@@ -51,10 +53,16 @@ public class FiveCardSTUD {
     }
 
 
+    /**
+     * Check to see if there is a two of a kind, three of a kind or 4 of a kind
+     * @param array array to check
+     * @return true if there is a two, three or four of a kid; false if no pairs
+     */
     public boolean findWin(ArrayList<Card> array) {
         int ace, two, three, four, five, six, seven, eight, nine, ten, J, Q, K;
         ace = two = three = four = five = six = seven = eight = nine = ten = J = Q = K = 0;
 
+        //stats
         for(int i = 0; i < array.size(); i++) {
             switch (array.get(i).getRank()) {
                 case "A":
