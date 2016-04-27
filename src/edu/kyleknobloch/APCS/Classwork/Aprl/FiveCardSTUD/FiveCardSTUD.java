@@ -11,10 +11,12 @@ public class FiveCardSTUD {
     private ArrayList<Card> hand2 = new ArrayList<>();
 
     private int ace, two, three, four, five, six, seven, eight, nine, ten, J, Q, K;
+    private int heart, diamonds, spades, clubs;
 
     public FiveCardSTUD() {
 
         ace = two = three = four = five = six = seven = eight = nine = ten = J = Q = K = 0;
+        heart = diamonds = spades = clubs = 0;
 
         Deck deck = new Deck();
         deck.shuffleDeck();
@@ -47,7 +49,7 @@ public class FiveCardSTUD {
          */
         calcStats(hand1);
 
-        if (find2())
+        if (find2Rank() || find5Suit())
             System.out.println("Hand 1 has a winning hand.");
         else
             System.out.println("Hand 1 is not a winning hand.");
@@ -56,18 +58,17 @@ public class FiveCardSTUD {
          * hand 2
          */
         calcStats(hand2);
-        if (find2())
-            System.out.println("Hand 1 has a winning hand.");
+        if (find2Rank() || find5Suit())
+            System.out.println("Hand 2 has a winning hand.");
         else
-            System.out.println("Hand 1 is not a winning hand.");
+            System.out.println("Hand 2 is not a winning hand.");
 
     }
 
 
     /**
-     * Check to see if there is a two of a kind, three of a kind or 4 of a kind
-     * @param array array to check
-     * @return true if there is a two, three or four of a kid; false if no pairs
+     * Calculate the statistics on cards in a array
+     * @param array array to calculate stats on
      */
     public void calcStats(ArrayList<Card> array) {
         //stats
@@ -115,11 +116,32 @@ public class FiveCardSTUD {
                 default:
                     break;
             }
+
+
+            switch (array.get(i).getSuit()) {
+                case "Hearts":
+                    heart++;
+                    break;
+                case "Diamonds":
+                    diamonds++;
+                    break;
+                case "Clubs":
+                    clubs++;
+                    break;
+                case "Spades":
+                    spades++;
+                    break;
+            }
+
         }
     }
 
 
-    public boolean find2() {
+    /**
+     * Determines if there is 2 or more of a rank
+     * @return 2 or more of any rank
+     */
+    private boolean find2Rank() {
         return  (ace >= 2) || (two >= 2) || (three >= 2) || (four >= 2) || (five >= 2) || (six >= 2) || (seven >= 2) ||
                 (eight >= 2) || (nine >= 2) || (ten >= 2) || (J >= 2) || (Q >= 2) || (K >= 2);
     }
@@ -132,4 +154,15 @@ public class FiveCardSTUD {
         return  (ace >= 4) || (two >= 4) || (three >= 4) || (four >= 4) || (five >= 4) || (six >= 4) || (seven >= 4) ||
                 (eight >= 4) || (nine >= 4) || (ten >= 4) || (J >= 4) || (Q >= 4) || (K >= 4);
     } */
+
+
+    /**
+     * Determines if there is 5 or more of a suit
+     * @return 5 or more of any suit
+     */
+    private boolean find5Suit() {
+        return (heart >= 5) || (diamonds >= 5) || (clubs >= 5) || (spades >= 5);
+    }
+
 }
+
