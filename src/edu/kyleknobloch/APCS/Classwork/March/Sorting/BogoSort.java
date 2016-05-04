@@ -7,15 +7,23 @@ public class BogoSort{
 
     private static final Random generator = new Random();
 
+    public static void main(String[] args) {
+        int [] array = {5,3,0,2,4,1,0,5,2,3,1,4,911};
+        System.out.println("Before: " + Arrays.toString(array));
+        bogoSort(array);
+        System.out.println("After:  " + Arrays.toString(array));
+    }
+
+
     public static void bogoSort(int[] array)  {
         while (!isSorted(array)) {
             for (int i = 0; i < array.length; i++){
-                System.out.println("Searching:  " + Arrays.toString(array));
-                try {
-                    Thread.sleep(50);
-                } catch (InterruptedException e) {
-                    //
-                }
+                //System.out.println("Searching:  " + Arrays.toString(array));
+                //try {
+                //    Thread.sleep(50);
+                //} catch (InterruptedException e) {
+                //    //
+                //}
                 int randomPosition = generator.nextInt(array.length);
                 int temp = array[i];
                 array[i] = array[randomPosition];
@@ -33,10 +41,4 @@ public class BogoSort{
         return true;
     }
 
-    public static void main(String[] args) {
-        int [] array = {5,3,0,2,4,1,0,5,2,3,1,4};
-        System.out.println("Before: " + Arrays.toString(array));
-        bogoSort(array);
-        System.out.println("After:  " + Arrays.toString(array));
-    }
 }

@@ -15,4 +15,13 @@ public class Recursive
          message(n -1);
       }
    }
+
+
+
+   public boolean test(int[] array, int target, int index) {
+      if (array[index] == target)
+         return true;
+      else
+         return test(array, target, index +1);
+   }
 }
