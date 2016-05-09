@@ -1,4 +1,4 @@
-package edu.kyleknobloch.APCS.Tests.December1;
+package edu.kyleknobloch.APCS.Exams.December1;
 
 import java.util.Random;
 

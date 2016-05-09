@@ -1,4 +1,4 @@
-package edu.kyleknobloch.APCS.Tests.midterm.Question3;
+package edu.kyleknobloch.APCS.Exams.midterm.Question3;
 
 
 import javax.naming.SizeLimitExceededException;

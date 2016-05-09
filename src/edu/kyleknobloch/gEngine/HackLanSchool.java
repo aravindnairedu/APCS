@@ -10,7 +10,7 @@ import java.awt.*;
 
 public class HackLanSchool extends GameBase
 {
-    private Game game = new Game("hack LANSchool IT'S OVER 900!.exe.jar.loo.exe", 500, 200);
+    private Game game = new Game("hack LANSchool IT'S OVER 9000!.exe.jar.loo.exe", 500, 200);
     private int barPosition = 1;
     private long initTime;
     private boolean finish = false;

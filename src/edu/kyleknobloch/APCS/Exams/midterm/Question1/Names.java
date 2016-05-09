@@ -1,4 +1,4 @@
-package edu.kyleknobloch.APCS.Tests.midterm.Question1;
+package edu.kyleknobloch.APCS.Exams.midterm.Question1;
 
 import javax.swing.*;
 
