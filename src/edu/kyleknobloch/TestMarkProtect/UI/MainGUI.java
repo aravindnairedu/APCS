@@ -2,12 +2,16 @@ package edu.kyleknobloch.TestMarkProtect.UI;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 
 /**
  *
  */
 public class MainGUI extends JFrame implements ItemListener {
+
 
     private JButton JBTNExit, JBTNAdd, JBTNSearch, JBTNAdmin;
 
@@ -72,7 +76,7 @@ public class MainGUI extends JFrame implements ItemListener {
 
 
     /**
-     * Creates a 3 coloum JPanel for the Main GUI, adds the buttons initialized in constructor.
+     * Creates a 3 column JPanel for the Main GUI, adds the buttons initialized in constructor.
      * @return JPanel for use in Main GUI
      */
     private JPanel mainLayout() {
@@ -81,9 +85,9 @@ public class MainGUI extends JFrame implements ItemListener {
         JPanel row2 = new JPanel();
         JPanel row3 = new JPanel();
 
-        // Grid Setup, 3 rows 1 collum for the return Frame
+        // Grid Setup, 3 rows 1 column for the return Frame
         buttonJP.setLayout(new GridLayout(3, 1));
-        //This is the 3 rows, 1 collum for the middle row of the return Frame
+        //This is the 3 rows, 1 column for the middle row of the return Frame
         row2.setLayout(new GridLayout(1, 3));
 
 
