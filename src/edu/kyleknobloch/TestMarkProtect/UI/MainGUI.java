@@ -2,48 +2,64 @@ package edu.kyleknobloch.TestMarkProtect.UI;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
+import java.awt.event.*;
 
 /**
- * Created by kyleknobloch on 11/30/15,
- * For
- * *
- * Actions:
+ *
  */
 public class MainGUI extends JFrame implements ItemListener {
 
-    private JButton JBTNExit, JBTNAdd, JBTNSearch;
+    private JButton JBTNExit, JBTNAdd, JBTNSearch, JBTNAdmin;
 
 
+    /**
+     * Main GUI Constructor.
+     * Creates all the buttons and the JFrame for the main window.
+     */
     public MainGUI() {
 
 
         /**
-         * button information
+         * button init
          */
         JBTNAdd = new JButton("Add Swim Test");
         JBTNAdd.setVerticalTextPosition(AbstractButton.CENTER);
         JBTNAdd.setHorizontalTextPosition(AbstractButton.LEADING);
-        JBTNAdd.setActionCommand("disable");
+        JBTNAdd.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                addBTN();
+            }
+        });
         JBTNAdd.setEnabled(true);
 
 
         JBTNExit = new JButton("Exit");
         JBTNExit.setVerticalTextPosition(AbstractButton.CENTER);
         JBTNExit.setHorizontalTextPosition(AbstractButton.LEADING);
-        JBTNExit.setActionCommand("disable");
+        JBTNExit.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                exitBTN();
+            }
+        });
         JBTNExit.setEnabled(true);
 
 
         JBTNSearch = new JButton("Search for Swim Test");
         JBTNSearch.setVerticalTextPosition(AbstractButton.CENTER);
         JBTNSearch.setHorizontalTextPosition(AbstractButton.LEADING);
-        JBTNSearch.set(this.searchBTN());
+        JBTNSearch.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                searchBTN();
+            }
+        });
         JBTNSearch.setEnabled(true);
 
 
-        setTitle("Test Mark Protect | Emilision");
+        /**
+         * JFrame
+         */
+
+        setTitle("Test Mark Protect | Emilison");
         setSize(800, 600);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
@@ -55,13 +71,19 @@ public class MainGUI extends JFrame implements ItemListener {
     }
 
 
+    /**
+     * Creates a 3 coloum JPanel for the Main GUI, adds the buttons initialized in constructor.
+     * @return JPanel for use in Main GUI
+     */
     private JPanel mainLayout() {
         JPanel buttonJP = new JPanel();
         JPanel row1 = new JPanel();
         JPanel row2 = new JPanel();
         JPanel row3 = new JPanel();
 
+        // Grid Setup, 3 rows 1 collum for the return Frame
         buttonJP.setLayout(new GridLayout(3, 1));
+        //This is the 3 rows, 1 collum for the middle row of the return Frame
         row2.setLayout(new GridLayout(1, 3));
 
 
@@ -75,77 +97,48 @@ public class MainGUI extends JFrame implements ItemListener {
         buttonJP.add(row3);
 
 
-        return buttonJP;
+        return buttonJP; //return Frame
 
     }
 
 
+    /**
+     * Exit button function - Close application.
+     */
     public void exitBTN() {
         System.exit(0);
     }
 
 
+    /**
+     * Add button function - add a new user to the database - this is graphics function only
+     */
     public void addBTN() {
-
+        AddGUI aGUI = new AddGUI();
     }
 
 
+    /**
+     * Search button function - search for a user in the database - this is graphics function only
+     */
     public void searchBTN() {
-
+        SearchGUI sGUI = new SearchGUI();
     }
 
 
-    public void visibilaty(boolean vis) {
+    /**
+     * changes the visibility of the main GUI.
+     * @param vis (visibility) true/false to show the MainGUI.
+     */
+    public void visibility(boolean vis) {
         setVisible(vis);
     }
 
 
-
-
-
-
-    public int showCommandUI () {
-        Object[] options = {"Search for Swim Test",
-                "Add Swim Test",
-                "Exit "};
-        int n = JOptionPane.showOptionDialog(null, "What would you like to do?", "Test Mark Protect",
-                JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE, null, options, options[2]);
-
-        System.out.println(n); //DEBUG
-        return n;
-    }
-
-
-    public String showSearchUI(String searchType) {
-        return JOptionPane.showInputDialog(null, "Enter the child's " + searchType + ": ");
-
-    }
-
-
-    public String showAddChildUI () {
-
-        String tokenizedString = "";
-
-        Object[] options = {"Green",
-                "Yellow",
-                "Red"};
-
-        tokenizedString = JOptionPane.showInputDialog(null, "Enter the child's FIRST name: ");
-
-        tokenizedString = JOptionPane.showInputDialog(null, "Enter the child's LAST name: ");
-
-        tokenizedString = tokenizedString + "_" + JOptionPane.showInputDialog(null, "Child's birthday: ");
-
-        tokenizedString = tokenizedString + "_" + JOptionPane.showOptionDialog(null, "Select the child's swim band color", "Add Child: Swim Test Color", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE, null, options, options[2]);
-
-        return tokenizedString;
-
-    }
-
-
-
-
-    //<3 JFrame and ItemListener
+    /**
+     * <3 from JFrame and ItemListener
+     * @param e ItemEvent
+     */
     @Override
     public void itemStateChanged(ItemEvent e) {
         //
