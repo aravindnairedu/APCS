@@ -19,13 +19,14 @@ public class TMP {
     }
 
 
-    /**
-     * Change Main GUI's visibility.
-     * @param vis visibility: true/fale
-     */
-    public void changeMainGUIVisibility(boolean vis) {
-        UI.setVisible(vis);
+    public void test() {
+        System.out.println("test");
     }
+
+
+
+
+
 
 
 }
