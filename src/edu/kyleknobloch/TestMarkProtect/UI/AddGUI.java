@@ -5,7 +5,10 @@ import edu.kyleknobloch.TestMarkProtect.Database.Commands;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 import java.util.Date;
 
 
@@ -124,7 +127,7 @@ public class AddGUI extends JFrame implements ItemListener {
      * Call to the DB command to add the new swim test
      */
     private void submitAddToDB() {
-        boolean sucsess;
+        boolean success;
 
 
         Date date = new Date();
@@ -133,9 +136,9 @@ public class AddGUI extends JFrame implements ItemListener {
         /**
          * Call to the DB command
          */
-        sucsess = Commands.add(JTEXTFName.getText(), JTEXTLName.getText(), JPANColors.getUIClassID(), date.toString(), JTEXTTester.getText());
+        success = Commands.add(JTEXTFName.getText(), JTEXTLName.getText(), "green", date.toString(), JTEXTTester.getText());
 
-        if (sucsess)
+        if (success)
             JOptionPane.showMessageDialog(null, "Addition worked.");
 
         else

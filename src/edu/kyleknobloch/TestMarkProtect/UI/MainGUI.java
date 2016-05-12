@@ -1,13 +1,15 @@
 package edu.kyleknobloch.TestMarkProtect.UI;
 
-import edu.kyleknobloch.TestMarkProtect.TMP;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 
 /**
- *
+ * Main GUI
  */
 public class MainGUI extends JFrame implements ItemListener {
 
