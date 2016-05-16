@@ -21,6 +21,7 @@ public class AddGUI extends JFrame implements ItemListener {
     private JTextField JTEXTFName, JTEXTLName, JTEXTTester;
     private JPanel JPANColors;
     private JButton JBTNSubmit;
+    private JLabel JLFName, JLLName, JLTester, JLColors;
 
 
     /**
@@ -29,7 +30,7 @@ public class AddGUI extends JFrame implements ItemListener {
     public AddGUI() {
 
         /**
-         * Buttons and text areas
+         * Buttons, labels and text areas
          */
         JTEXTFName = new JTextField();
         JTEXTFName.setColumns(50);
@@ -75,6 +76,12 @@ public class AddGUI extends JFrame implements ItemListener {
         JBTNSubmit.setEnabled(true);
 
 
+        JLFName = new JLabel("First Name: ");
+        JLLName = new JLabel("Last Name: ");
+        JLTester = new JLabel("Tester Initials: ");
+        JLColors = new JLabel("Wristband: ");
+
+
         /**
          * JFrame
          */
@@ -98,18 +105,26 @@ public class AddGUI extends JFrame implements ItemListener {
         JPanel rowOne = new JPanel(); //f/l name | 1r, 2c
         JPanel rowTwo = new JPanel(); //colors & tester 1r, 2c
         JPanel rowThree = new JPanel(); //date check + submit, 1r, 2c
+        JPanel rowThreeOne = new JPanel(); //the submit button.
 
 
         addJPanel.setLayout(new GridLayout(3, 1));
-        rowOne.setLayout(new GridLayout(1, 2));
+        rowOne.setLayout(new GridLayout(2, 2));
         rowTwo.setLayout(new GridLayout(1, 2));
-        rowThree.setLayout(new GridLayout(1, 2));
+        rowThree.setLayout(new GridLayout(2, 2));
 
-        rowOne.add(JTEXTFName);
+        rowOne.add(JLFName);
+        rowOne.add(JLLName);
         rowOne.add(JTEXTLName);
+        rowOne.add(JTEXTFName);
 
+
+        rowTwo.add(JLColors);
         rowTwo.add(JPANColors);
 
+
+        rowThree.add(JLTester);
+        rowThree.add(new JPanel());
         rowThree.add(JTEXTTester);
         rowThree.add(JBTNSubmit);
 
@@ -138,8 +153,11 @@ public class AddGUI extends JFrame implements ItemListener {
          */
         success = Commands.add(JTEXTFName.getText(), JTEXTLName.getText(), "green", date.toString(), JTEXTTester.getText());
 
-        if (success)
+        if (success) {
             JOptionPane.showMessageDialog(null, "Addition worked.");
+            setVisible(false);
+            //System.out.println(toString());
+        }
 
         else
             JOptionPane.showMessageDialog(null, "Addition failed, please try again later");
