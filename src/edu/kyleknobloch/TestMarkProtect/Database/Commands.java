@@ -17,18 +17,28 @@ public class Commands {
      */
     public static boolean add(String fName, String lName, String color, String date, String tester) {
 
-        String command = "";
-        Connection db = new Connection();
-
-        /**
-         * build command
-         */
+        String command = "INSERT INTO Emilision ";
+        TMPConnection db;
 
 
-        /**
-         * submit command to database, if false something has gone wrong -- tell the call this with false.
-         */
-        return db.submitMySQLCommand(command);
+        try {
+            db = new TMPConnection();
+
+
+            /**
+             * build command
+             */
+
+
+            /**
+             * submit command to database, if false something has gone wrong -- tell the call this with false.
+             */
+            return db.submitMySQLCommand(command);
+
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return false;
     }
 
 
@@ -40,17 +50,27 @@ public class Commands {
     public static boolean search(String target) {
 
         String command = "" + target;
-        Connection db = new Connection();
+        TMPConnection db;
 
-        /**
-         * build command
-         */
+        try {
+            db = new TMPConnection();
+
+            /**
+             * build command
+             */
 
 
-        /**
-         * submit command to database, if false something has gone wrong -- tell the call this with false.
-         */
-        return db.submitMySQLCommand(command);
+            /**
+             * submit command to database, if false something has gone wrong -- tell the call this with false.
+             */
+            return db.submitMySQLCommand(command);
+
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+
+        return false;
     }
 
 
