@@ -35,9 +35,16 @@ public class TMPConnection {
         try {
             // This will load the MySQL driver, each DB has its own driver
             Class.forName("com.mysql.jdbc.Driver");
-            // Setup the connection with the DB
-            connect = DriverManager.getConnection("jdbc:mysql://localhost/feedback?user=sqluser&password=sqluserpw");
 
+            // Setup the connection with the DB
+            connect = DriverManager.getConnection("jdbc:mysql://" + address+ "/" + database + "?user=" + username + "&password=" + password);
+
+
+            statement = connect.createStatement();
+            resultSet = statement.executeQuery("SELECT * from db");
+
+
+            /*
             // Statements allow to issue SQL queries to the database
             statement = connect.createStatement();
             // Result set get the result of the SQL query
@@ -67,6 +74,8 @@ public class TMPConnection {
 
             resultSet = statement.executeQuery("select * from feedback.comments");
             writeMetaData(resultSet);
+            */
+
 
         } catch (Exception e) {
             System.out.println(e);

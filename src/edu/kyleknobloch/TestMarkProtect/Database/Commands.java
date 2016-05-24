@@ -21,6 +21,10 @@ public class Commands {
         TMPConnection db;
 
 
+        //INSERT INTO TMP VALUES(null, 'fname', 'lname', 'color', 'date', 'tester');
+        //                        ID                            YYYY-MM-DD
+
+
         try {
             db = new TMPConnection();
 
@@ -28,6 +32,9 @@ public class Commands {
             /**
              * build command
              */
+
+
+
 
 
             /**
