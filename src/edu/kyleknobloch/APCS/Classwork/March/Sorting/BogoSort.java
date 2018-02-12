@@ -8,8 +8,8 @@ public class BogoSort{
     private static final Random generator = new Random();
 
     public static void main(String[] args) {
-        int [] array = {5,3,0,2,4,1,0,5,2,3,1,4,911};
-        System.out.println("Before: " + Arrays.toString(array));
+        int [] array = {5,3,0,5,6,7,8,9,44,2,4,1,0,5,2,3,1,4,911};
+        System.out.println("Before: " + Arrays.toString(array) + " n = " + array.length);
         bogoSort(array);
         System.out.println("After:  " + Arrays.toString(array));
     }
@@ -17,6 +17,8 @@ public class BogoSort{
 
     public static void bogoSort(int[] array)  {
         while (!isSorted(array)) {
+
+            String strArray = "";
             for (int i = 0; i < array.length; i++){
                 //System.out.println("Searching:  " + Arrays.toString(array));
                 //try {
@@ -29,6 +31,12 @@ public class BogoSort{
                 array[i] = array[randomPosition];
                 array[randomPosition] = temp;
             }
+
+            /*for (int i = 0; i < array.length; i++) {
+                strArray = strArray + array[i] + ", ";
+            }
+
+            System.out.println("Sorting..." + strArray );*/
         }
     }
 

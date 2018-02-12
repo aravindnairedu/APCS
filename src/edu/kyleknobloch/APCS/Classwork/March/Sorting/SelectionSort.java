@@ -1,5 +1,7 @@
 package edu.kyleknobloch.APCS.Classwork.March.Sorting;
 
+import java.util.Arrays;
+
 /**
  *
  */
@@ -23,9 +25,9 @@ public class SelectionSort {
         }
 
 
-        for (int i = 0; i < array.length; i++) {
-            System.out.println("Index " + i + ": " + array[i]);
-        }
+        //for (int i = 0; i < array.length; i++) {
+        System.out.println(Arrays.toString(array));
+        //}
     }
 
 }
